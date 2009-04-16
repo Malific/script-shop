@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 4/16/2009 1:25AM
+echo Last tweak 4/16/2009 5:41PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -9965,7 +9965,7 @@ setvariable zHmonster MONSTER6B
 	matchre IMP /imp (which appears dead|\(dead\))/i
 	matchre BUCCA /bucca (which appears dead|\(dead\))/i
 	matchre MONSTER_FAIL /paths:|exits:/i
-	matchre MONSTER_DEAD /(which appears dead|\(dead))/i
+	matchre MONSTER_DEAD /(which appears dead|\(dead\))/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
 put look other
 	matchwait
@@ -15170,7 +15170,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 4/16/2009 1:25AM
+	echo ** SFhunter Version 2: Last tweak 4/16/2009 5:41PM
 	echo **
 	echo **************************************************************************************
 	echo
