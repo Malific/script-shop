@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 4/16/2009 5:41PM
+echo Last tweak 4/16/2009 6:20PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -1329,35 +1329,6 @@ setvariable zHarrange ARR_YES
 setvariable zHskin SKIN1
 goto %c
 
-
-ARRF:
-ARRAF:
-ARRANF:
-ARRANGF:
-ARRANGEF:
-ARRFU:
-ARRAFU:
-ARRANFU:
-ARRANGFU:
-ARRANGEFU:
-ARRFUL:
-ARRAFUL:
-ARRANFUL:
-ARRANGFUL:
-ARRANGEFUL:
-ARRFULL:
-ARRAFULL:
-ARRANFULL:
-ARRANGFULL:
-ARRANGEFULL:
-ARRANGE_FULL:
-	echo
-	echo ARRANGE_FULL:
-	echo
-shift
-setvariable zHarrange ARR_FULL
-setvariable zHskin SKIN1
-goto %c
 
 LOOTC:
 LOOTCO:
@@ -11530,46 +11501,8 @@ ARR_YES:
 	match %zHretreat Ranger
 	match SKIN1_PAUSE ...wait
 	match SKIN1_PAUSE type ahead
-put arrange
+put arrange all
 	matchwait
-
-ARR_SKIN1_:
-ARR_FULL:
-	match %zHretreat you can't
-# Following two lines Courtesy of Mallet D
-	match ARR_FULL2 You properly arrange
-	match SKIN1__PAUSE has already been arranged
-# End of Courtesy :-P
-	match SKIN1B already been skinned
-	match SKIN1B You might want to kill it first
-	match SKIN1__PAUSE roundtime
-	match %zHretreat You don't have enough experience
-	match %zHretreat Ranger
-	match SKIN1_PAUSE ...wait
-	match SKIN1_PAUSE type ahead
-put arrange
-	matchwait
-
-ARR_FULL2:
-	match %zHretreat you can't
-# Following two lines Courtesy of Mallet D
-	match ARR_%zHretreat You properly arrange
-	match SKIN1__PAUSE has already been arranged
-# End of Courtesy :-P
-	match SKIN1B already been skinned
-	match SKIN1B You might want to kill it first
-	match SKIN1__PAUSE roundtime
-	match %zHretreat You don't have enough experience
-	match %zHretreat Ranger
-	match SKIN1_PAUSE ...wait
-	match SKIN1_PAUSE type ahead
-put arrange
-	matchwait
-
-ARR_SKIN_RETREAT:
-put retreat
-put retreat
-goto ARR_FULL
 
 SKIN1B_PAUSE:
 pause
@@ -14841,8 +14774,7 @@ echo ** Skin or  : Skins, bundles, leaves bundles on ground. If it can't bundle,
 echo **  Skinning  the skin if you are looting, drops the skin if you aren't.
 echo ** Skindrop : Same as 'skin' but drops the skin if it can't bundle.
 echo ** Skinexp  : Skins the kill, then drops the skin, makes no attempt to stow or bundle.
-echo ** Arrange  : Same as 'skin' but it arranges once first.  - Arr
-echo ** ArrangeF : Same as "arrange" but arranges until fully arranged. - ArrF
+echo ** Arrange  : Same as 'skin' but it will 'arrange all' first.  - Arr
 echo ** Retreat  : Will make the script retreat before skinning.  - Ret
 echo **
 echo ** There is no need to use 'skin' if you are using one of the other options, it knows
@@ -15170,7 +15102,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 4/16/2009 5:41PM
+	echo ** SFhunter Version 2: Last tweak 4/16/2009 6:20PM
 	echo **
 	echo **************************************************************************************
 	echo
