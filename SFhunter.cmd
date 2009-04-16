@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 4/10/2009 10:58PM
+echo Last tweak 4/16/2009 1:25AM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -9962,8 +9962,8 @@ setvariable zHmonster MONSTER6B
 	matchre BEAST /beast (which appears dead|\(dead\))/i
 	matchre BASILISK /basilisk (which appears dead|\(dead\))/i
 	matchre MERROW /merrow (which appears dead|\(dead\))/i
-	matchre IMP /imp (which appears dead|\(dead))/i
-	matchre BUCCA /bucca (which appears dead|\(dead))/i
+	matchre IMP /imp (which appears dead|\(dead\))/i
+	matchre BUCCA /bucca (which appears dead|\(dead\))/i
 	matchre MONSTER_FAIL /paths:|exits:/i
 	matchre MONSTER_DEAD /(which appears dead|\(dead))/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
@@ -10198,8 +10198,8 @@ echo
 	matchre BEAST /beast (which appears dead|\(dead\))/i
 	matchre BASILISK /basilisk (which appears dead|\(dead\))/i
 	matchre MERROW /merrow (which appears dead|\(dead\))/i
-	matchre IMP /imp (which appears dead|\(dead))/i
-	matchre BUCCA /bucca (which appears dead|\(dead))/i
+	matchre IMP /imp (which appears dead|\(dead\))/i
+	matchre BUCCA /bucca (which appears dead|\(dead\))/i
 	matchre MONSTER1 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
 put look other
@@ -15170,7 +15170,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 4/10/2009 10:58PM
+	echo ** SFhunter Version 2: Last tweak 4/16/2009 1:25AM
 	echo **
 	echo **************************************************************************************
 	echo
