@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 4/23/2009 7:13PM
+echo Last tweak 4/23/2009 5:48PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -146,7 +146,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 4/23/2009 7:13PM
+	echo ** EZhunter DR2v1: Last tweak 4/23/2009 5:48PM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -20697,7 +20697,7 @@ echo
 put look
 	matchwait
 
-## 30/32
+## 28/32
 MONSTER6:
 echo
 echo MONSTER6
@@ -20730,10 +20730,6 @@ echo
 	match MERROW6 merrow which appears dead
 	match IMP6 imp which appears dead
 	match BUCCA6 bucca which appears dead
-#Temporary
-	match MUTT6 mutt which appears dead
-	match PEON6 peon which appears dead
-#END Temp
 	match MONSTER_FAIL s:
 	match MONSTER_DEAD which appears dead
 put look
@@ -20748,10 +20744,6 @@ MONSTER_DEAD:
 	echo ** Found a dead monster but could **
 	echo ** NOT identify it. Please email  **
 	echo ** it to drockmali@hotmail.com    **
-	echo **                                **
-	echo ** Please include other monsters  **
-	echo ** in the area as well as if it   **
-	echo ** can be skinned or not.         **
 	echo ************************************
 	echo
 	goto S_%c
@@ -22007,22 +21999,6 @@ echo MERROW6:
 echo
 	counter add 600000
 	save merrow
-	goto S_%c
-
-MUTT6:
-echo
-echo MUTT6:
-echo
-	counter add 600000
-	save mutt
-	goto S_%c
-
-PEON6:
-echo
-echo PEON6:
-echo
-	counter add 600000
-	save peon
 	goto S_%c
 
 IMP6:
@@ -41813,8 +41789,6 @@ MONSTER_GROUP_6:
 	match MERROW merrow which appears dead
 	match IMP imp which appears dead
 	match BUCCA bucca which appears dead
-	match MUTT mutt which appears dead
-	match PEON peon which appears dead
 	match MONSTER6_F s:
 put look
 	matchwait
@@ -46270,19 +46244,6 @@ echo
 	save merrow
 	goto S_%c
 
-MUTT:
-echo
-echo MUTT:
-echo
-	save mutt
-	goto S_%c
-
-PEON:
-echo
-echo PEON:
-echo
-	save peon
-	goto S_%c
 IMP:
 echo
 echo IMP:
