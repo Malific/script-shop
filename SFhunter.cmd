@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 4/23/2009 5:48PM
+echo Last tweak 4/23/2009 7:13PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -9688,6 +9688,7 @@ counter set %zHcounter
 
 goto %zHmonster
 
+Monster_list:
 Monsterlist:
 %EZmonster:
 %zHmonster:
@@ -9901,7 +9902,7 @@ setvariable zHmonster MONSTER5B
 put look
 	matchwait
 
-# 30/32
+# 32/32
 MONSTER6:
 MONSTER_GROUP_6:
 echo
@@ -9936,6 +9937,10 @@ setvariable zHmonster MONSTER6B
 	matchre MERROW /merrow (which appears dead|\(dead\))/i
 	matchre IMP /imp (which appears dead|\(dead\))/i
 	matchre BUCCA /bucca (which appears dead|\(dead\))/i
+#temporary
+	matchre MUTT /mutt (which appears dead|\(dead\))/i
+	matchre PEON /peon (which appears dead|\(dead\))/i
+#END Temp
 	matchre MONSTER_FAIL /paths:|exits:/i
 	matchre MONSTER_DEAD /(which appears dead|\(dead\))/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
@@ -10172,6 +10177,8 @@ echo
 	matchre MERROW /merrow (which appears dead|\(dead\))/i
 	matchre IMP /imp (which appears dead|\(dead\))/i
 	matchre BUCCA /bucca (which appears dead|\(dead\))/i
+	matchre MUTT /mutt (which appears dead|\(dead\))/i
+	matchre PEON /peon (which appears dead|\(dead\))/i
 	matchre MONSTER1 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
 put look
@@ -10187,6 +10194,10 @@ setvariable zHmonster MONSTER1
 	echo ** Found a dead monster but could **
 	echo ** NOT identify it. Please email  **
 	echo ** it to drockmali@hotmail.com    **
+	echo **                                **
+	echo ** Please include other monsters  **
+	echo ** in the area as well as if it   **
+	echo ** can be skinned or not.         **
 	echo ************************************
 	echo
 	goto SKIN_VARI_CHECK
@@ -10202,6 +10213,20 @@ setvariable zHmonster MONSTER1
 	echo ************************************
 	echo
 	goto NO_LOOT
+
+PEON:
+echo
+echo PEON:
+echo
+	setvariable zHkill peon
+	goto SKIN_VARI_CHECK
+
+MUTT:
+echo
+echo MUTT:
+echo
+	setvariable zHkill mutt
+	goto SKIN_VARI_CHECK
 
 IMP:
 echo
@@ -15105,7 +15130,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 4/23/2009 5:48PM
+	echo ** SFhunter Version 2: Last tweak 4/23/2009 7:13PM
 	echo **
 	echo **************************************************************************************
 	echo
