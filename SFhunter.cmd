@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 4/16/2009 6:20PM
+echo Last tweak 4/23/2009 5:48PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -1275,6 +1275,7 @@ setvariable zHexpB ON
 counter add 1000
 	match AMB_THIEF Guild: Thief
 	match BEGIN Wealth:
+	match BEGIN Coins:
 put info
 	matchwait
 
@@ -4333,7 +4334,7 @@ RANGE_DEATH:
 	matchre %zHrepeat%_DEAD_LOAD /paths:|exits:|and you can't see a thing|Your world is a crimson haze/i
 	match RANGE_DEATH_PAUSE ...wait
 	match RANGE_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 REPEAT_DEAD_LOAD:
@@ -5015,7 +5016,7 @@ SNAP_DEATH:
 	matchre SNAP_%zHrepeat%_LOAD_PAUSE /paths:|exits:|and you can't see a thing|Your world is a crimson haze/i
 	match SNAP_DEATH_PAUSE ...wait
 	match SNAP_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 SNAP_2_AIM_PAUSE:
@@ -9454,7 +9455,7 @@ MAGIC_DEATH_OFF:
 	match MAGIC_DEATH_OFF_PAUSE ...wait
 	match MAGIC_DEATH_OFF_PAUSE type ahead
 	match STUN stunned
-put look other
+put look
 	matchwait
 
 MAGIC_DEATH_ON_PAUSE:
@@ -9465,7 +9466,7 @@ MAGIC_DEATH_ON:
 	match MAGIC_DEATH_ON_PAUSE ...wait
 	match MAGIC_DEATH_ON_PAUSE type ahead
 	match STUN stunned
-put look other
+put look
 	matchwait
 
 MAGIC_COMBAT:
@@ -9651,7 +9652,7 @@ SN_MAGIC_DEATH:
 	match SN_MAGIC_DEATH_PAUSE ...wait
 	match SN_MAGIC_DEATH_PAUSE type ahead
 	match STUN stunned
-put look other
+put look
 	matchwait
 
 SN_MAGIC_COMBAT:
@@ -9730,7 +9731,7 @@ setvariable zHmonster MONSTER1B
 	matchre WASP /wasp (which appears dead|\(dead\))/i
 	matchre MONSTER2 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 
 # 32/32
@@ -9773,7 +9774,7 @@ setvariable zHmonster MONSTER2B
 	matchre INKHORNE /inkhorne (which appears dead|\(dead\))/i
 	matchre MONSTER3 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 
 # 32/32
@@ -9815,7 +9816,7 @@ setvariable zHmonster MONSTER3B
 	matchre ATIKET /atik'et (which appears dead|\(dead\))/i
 	matchre MONSTER4 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 #33/32
 MONSTER4:
@@ -9857,7 +9858,7 @@ setvariable zHmonster MONSTER4B
 	matchre LACH /lach (which appears dead|\(dead\))/i
 	matchre MONSTER5 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 # 31/32
 MONSTER5:
@@ -9897,7 +9898,7 @@ setvariable zHmonster MONSTER5B
 	matchre RAVEN /raven (which appears dead|\(dead\))/i
 	matchre MONSTER6 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 
 # 30/32
@@ -9938,7 +9939,7 @@ setvariable zHmonster MONSTER6B
 	matchre MONSTER_FAIL /paths:|exits:/i
 	matchre MONSTER_DEAD /(which appears dead|\(dead\))/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 
 MONSTER1B:
@@ -9978,7 +9979,7 @@ echo
 	matchre WASP /wasp (which appears dead|\(dead\))/i
 	matchre MONSTER2 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 
 # 32/32
@@ -10019,7 +10020,7 @@ echo
 	matchre INKHORNE /inkhorne (which appears dead|\(dead\))/i
 	matchre MONSTER1 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 
 MONSTER3B:
@@ -10058,7 +10059,7 @@ echo
 	matchre ATIKET /atik'et (which appears dead|\(dead\))/i
 	matchre MONSTER1 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 
 MONSTER4B:
@@ -10098,7 +10099,7 @@ echo
 	matchre LACH /lach (which appears dead|\(dead\))/i
 	matchre MONSTER1 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 
 MONSTER5B:
@@ -10136,7 +10137,7 @@ echo
 	matchre RAVEN /raven (which appears dead|\(dead\))/i
 	matchre MONSTER6B /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 
 MONSTER6B:
@@ -10173,7 +10174,7 @@ echo
 	matchre BUCCA /bucca (which appears dead|\(dead\))/i
 	matchre MONSTER1 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 	matchwait
 
 MONSTER_DEAD:
@@ -12985,7 +12986,7 @@ COIN_1:
 	matchre LOOT_TABLET / tablet,| tablet\.| tablet and /i
 	matchre NO_LOOT /Encumbrance :|paths:|exits:/i
 	matchre NO_LOOT_DARK /and you can't see a thing|Your world is a crimson haze/i
-put look other
+put look
 put encum
 	matchwait
 
@@ -15102,7 +15103,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 4/16/2009 6:20PM
+	echo ** SFhunter Version 2: Last tweak 4/23/2009 5:48PM
 	echo **
 	echo **************************************************************************************
 	echo

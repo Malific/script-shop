@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 4/10/2009 10:58PM
+echo Last tweak 4/23/2009 5:48PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -146,7 +146,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 4/10/2009 10:58PM
+	echo ** EZhunter DR2v1: Last tweak 4/23/2009 5:48PM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -4973,7 +4973,7 @@ SL_DEATH:
 	match SL_LOAD s:
 	match SL_DEATH_PAUSE ...wait
 	match SL_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 
@@ -5355,7 +5355,7 @@ XB_DEATH:
 	match XB_LOAD s:
 	match XB_DEATH_PAUSE ...wait
 	match XB_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 
@@ -5774,7 +5774,7 @@ BOW_DEATH:
 	match BOW_LOAD s:
 	match BOW_DEATH_PAUSE ...wait
 	match BOW_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 
@@ -7575,7 +7575,7 @@ POACH_SL_DEATH:
 	match POACH_SL_LOAD s:
 	match POACH_SL_DEATH_PAUSE ...wait
 	match POACH_SL_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 POACH_SL_FAIL_PAUSE:
@@ -8110,7 +8110,7 @@ POACH_XB_DEATH:
 	match POACH_XB_LOAD s:
 	match POACH_XB_DEATH_PAUSE ...wait
 	match POACH_XB_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 POACH_XB_FAIL_PAUSE:
@@ -8648,7 +8648,7 @@ POACH_BOW_DEATH:
 	match POACH_BOW_LOAD s:
 	match POACH_BOW_DEATH_PAUSE ...wait
 	match POACH_BOW_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 POACH_BOW_FAIL_PAUSE:
@@ -9252,7 +9252,7 @@ SNIPE_XB_DEATH:
 	match SNIPE_XB_LOAD s:
 	match SNIPE_XB_DEATH_PAUSE ...wait
 	match SNIPE_XB_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 SNIPE_XB_FAIL_PAUSE:
@@ -9779,7 +9779,7 @@ SNIPE_BOW_DEATH:
 	match SNIPE_BOW_LOAD s:
 	match SNIPE_BOW_DEATH_PAUSE ...wait
 	match SNIPE_BOW_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 SNIPE_BOW_FAIL_PAUSE:
@@ -14362,7 +14362,7 @@ SL_DEATH_SF:
 	match SL_LOAD_SF s:
 	match SL_DEATH_PAUSE_SF ...wait
 	match SL_DEATH_PAUSE_SF type ahead
-put look other
+put look
 	matchwait
 
 
@@ -14710,7 +14710,7 @@ XB_DEATH_SF:
 	match XB_LOAD_SF s:
 	match XB_DEATH_PAUSE_SF ...wait
 	match XB_DEATH_PAUSE_SF type ahead
-put look other
+put look
 	matchwait
 
 
@@ -15055,7 +15055,7 @@ BOW_DEATH_SF:
 	match BOW_LOAD_SF s:
 	match BOW_DEATH_PAUSE_SF ...wait
 	match BOW_DEATH_PAUSE_SF type ahead
-put look other
+put look
 	matchwait
 
 
@@ -15529,7 +15529,7 @@ SF_POACH_SL_DEATH:
 	match SF_POACH_SL_LOAD s:
 	match SF_POACH_SL_DEATH_PAUSE ...wait
 	match SF_POACH_SL_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 SF_POACH_SL_FAIL_PAUSE:
@@ -16022,7 +16022,7 @@ SF_POACH_XB_DEATH:
 	match SF_POACH_XB_LOAD s:
 	match SF_POACH_XB_DEATH_PAUSE ...wait
 	match SF_POACH_XB_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 SF_POACH_XB_FAIL_PAUSE:
@@ -16388,7 +16388,7 @@ SF_POACH_BOW_DEATH:
 	match SF_POACH_BOW_LOAD s:
 	match SF_POACH_BOW_DEATH_PAUSE ...wait
 	match SF_POACH_BOW_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 SF_POACH_BOW_FAIL_PAUSE:
@@ -16877,7 +16877,7 @@ SF_SNIPE_XB_DEATH:
 	match SF_SNIPE_XB_LOAD s:
 	match SF_SNIPE_XB_DEATH_PAUSE ...wait
 	match SF_SNIPE_XB_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 SF_SNIPE_XB_FAIL_PAUSE:
@@ -17243,7 +17243,7 @@ SF_SNIPE_BOW_DEATH:
 	match SF_SNIPE_BOW_LOAD s:
 	match SF_SNIPE_BOW_DEATH_PAUSE ...wait
 	match SF_SNIPE_BOW_DEATH_PAUSE type ahead
-put look other
+put look
 	matchwait
 
 SF_SNIPE_BOW_FAIL_PAUSE:
@@ -20537,7 +20537,7 @@ echo
 	match LARVA1 LARVA which appears dead
 	match WASP1 LARVA which appears dead
 	match MONSTER2 s:
-put look other
+put look
 	matchwait
 
 
@@ -20578,7 +20578,7 @@ echo
 	match GHOUL2 ghoul which appears dead
 	match INKHORNE2 inkhorne which appears dead
 	match MONSTER3 s:
-put look other
+put look
 	matchwait
 ##TABLE FULL!  32/32
 MONSTER3:
@@ -20617,7 +20617,7 @@ echo
 	match SQUIRREL3 squirrel which appears dead
 	match ATIKET3 atik'et which appears dead
 	match MONSTER4 s:
-put look other
+put look
 	matchwait
 ## 32/32
 MONSTER4:
@@ -20656,7 +20656,7 @@ echo
 	match SAVAGE4 savage which appears dead
 	match LACH4 lach which appears dead
 	match MONSTER5 s:
-put look other
+put look
 	matchwait
 
 ## 31/32
@@ -20694,7 +20694,7 @@ echo
 	match GREMLIN5 gremlin which appears dead
 	match RAVEN5 raven which appears dead
 	match MONSTER6 s:
-put look other
+put look
 	matchwait
 
 ## 28/32
@@ -20732,7 +20732,7 @@ echo
 	match BUCCA6 bucca which appears dead
 	match MONSTER_FAIL s:
 	match MONSTER_DEAD which appears dead
-put look other
+put look
 	matchwait
 
 MONSTER_DEAD:
@@ -25452,7 +25452,7 @@ echo
 	match MOTH moth which appears dead
 	match WASP wasp which appears dead
 	match MONSTER2 s:
-put look other
+put look
 	matchwait
 
 MONSTER1_F:
@@ -28719,7 +28719,7 @@ MONSTER_GROUP_2:
 	match POTHANIT croff pothanit which appears dead
 	match GHOUL ghoul which appears dead
 	match MONSTER2_F s:
-put look other
+put look
 	matchwait
 
 MONSTER2_F:
@@ -31987,7 +31987,7 @@ MONSTER_GROUP_3:
 	match SQUIRREL squirrel which appears dead
 	match ATIKET atik'et which appears dead
 	match MONSTER3_F s:
-put look other
+put look
 	matchwait
 
 MONSTER3_F:
@@ -35257,7 +35257,7 @@ MONSTER_GROUP_4:
 	match SAVAGE savage which appears dead
 	match LACH lach which appears dead
 	match MONSTER4_F s:
-put look other
+put look
 	matchwait
 
 MONSTER4_F:
@@ -38524,7 +38524,7 @@ MONSTER_GROUP_5:
 	match STEED steed which appears dead
 	match GREMLIN gremlin which appears dead
 	match MONSTER5_F s:
-put look other
+put look
 	matchwait
 
 MONSTER5_F:
@@ -41790,7 +41790,7 @@ MONSTER_GROUP_6:
 	match IMP imp which appears dead
 	match BUCCA bucca which appears dead
 	match MONSTER6_F s:
-put look other
+put look
 	matchwait
 
 MONSTER6_F:
@@ -118281,7 +118281,7 @@ LOOTING:
 #Netzer	match LOOT_STONE  stone,
 #Netzer	match LOOT_BOX  box,
 #Netzer	match NO_LOOT Encumbrance :
-#Netzerput look other
+#Netzerput look
 #Netzerput encum
 #Netzer	matchwait
 	echo
@@ -118331,7 +118331,7 @@ LOOTING:
 	match LOOT_CARD  card.
 	match LOOT_COIN  coin
 	match LOOT_BOXES_PAUSE Encumbrance :
-put look other
+put look
 put encum
 	matchwait
 
