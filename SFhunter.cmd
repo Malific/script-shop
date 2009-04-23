@@ -11497,6 +11497,7 @@ ARR_YES:
 	match %zHretreat you can't
 	match SKIN1B already been skinned
 	match SKIN1B You might want to kill it first
+	match SKIN1__PAUSE has already
 	match SKIN1__PAUSE roundtime
 	match %zHretreat You don't have enough experience
 	match %zHretreat Ranger
@@ -11513,13 +11514,14 @@ SKIN1B:
 	echo
 	match %zHretreat You might want to kill it first
 	match SKIN_FAIL already been skinned
+	match SKIN1__PAUSE has already
 	match SKIN1__PAUSE roundtime
 	match %zHretreat You don't have enough experience
 	match %zHretreat Ranger
 	match SKIN1B_PAUSE ...wait
 	match SKIN1B_PAUSE type ahead
 	match SEARCH You can't do that.
-put arrange other %zHkill
+put arrange other %zHkill all
 	matchwait
 
 
