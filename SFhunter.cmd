@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 4/23/2009 7:13PM
+echo Last tweak 5/8/2009 1:43PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -119,7 +119,7 @@ BEGIN:
 	match WEAPON_CHECK re already holding
 	match BEGIN_HANDS free hand
 	match WEAPON_CHECK free to
-	matchre BEGINA /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre BEGINA /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	match BEGINA You can only wield a weapon or a shield!
 	match BEGIN_PAUSE ...wait
 	match BEGIN_PAUSE type ahead
@@ -1015,9 +1015,9 @@ shift
 counter add 2200
 	match OFF_THROW_VARI you draw
 	match OFF_THROW_VARI free to
-	match OFF_THROW_VARI re already
+	match OFF_THROW_VARI re already h
 	match BEGIN_HANDS free hand
-	matchre OFF_THROW_EQUIP /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre OFF_THROW_EQUIP /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	match OFF_THROW_EQUIP You can only wield a weapon or a shield!
 put wield left my %1
 	matchwait
@@ -1083,9 +1083,9 @@ shift
 counter add 1200
 	match THROW_VARI you draw
 	match THROW_VARI free to
-	match THROW_VARI re already
+	match THROW_VARI re already h
 	match BEGIN_HANDS free hand
-	matchre THROW_EQUIP /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre THROW_EQUIP /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	match THROW_BRAWL You can only wield a weapon or a shield!
 put wield right my %1
 	matchwait
@@ -1601,10 +1601,10 @@ BASTARD:
 	echo
 shift
 	match SWAPPABLE_%1 you draw
-	match SWAPPABLE_%1 re already
+	match SWAPPABLE_%1 re already h
 	match BEGIN_HANDS free hand
 	match SWAPPABLE_%1 free to
-	matchre SWAPPABLE_A /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre SWAPPABLE_A /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	match LABELERROR You can only wield a weapon or a shield!
 put wield right my %2
 	matchwait
@@ -1827,7 +1827,7 @@ MAGIC_EQUIP:
 	match M_WEAPON_CHECK re already holding
 	match BEGIN_HANDS free hand
 	match M_WEAPON_CHECK free to
-	matchre M_BEGINA /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre M_BEGINA /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	match M_VARI_CHECK You can only wield a weapon or a shield!
 	match MAGIC_EQUIP_PAUSE ...wait
 put wield right my %1
@@ -1956,10 +1956,10 @@ M_BASTARD:
 	echo
 shift
 	match M_SWAPPABLE_%1 you draw
-	match M_SWAPPABLE_%1 re already
+	match M_SWAPPABLE_%1 re already h
 	match BEGIN_HANDS free hand
 	match M_SWAPPABLE_%1 free to
-	matchre M_SWAPPABLE_A /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre M_SWAPPABLE_A /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	match LABELERROR You can only wield a weapon or a shield!
 put wield right my %2
 	matchwait
@@ -3147,7 +3147,7 @@ DEF1_EQUIP_OFFHAND:
 	echo DEF1_EQUIP_OFFHAND:
 	echo
 	matchre DEF1_OFFHAND_SWAP /you draw|re already holding|free to/i
-	matchre DEF1_OFFHAND2 /out of reach|What were you|REMOVE|Wield what|can't seem|You can only wield a weapon or a shield/i
+	matchre DEF1_OFFHAND2 /out of reach|What were you|remove|already w|Wield what|can't seem|You can only wield a weapon or a shield/i
 	matchre DEF1_EQUIP_OFFHAND_PAUSE /\.\.\.wait|type ahead/i
 	match BEGIN_HANDS free hand
 put wield left my %1
@@ -3203,7 +3203,7 @@ DEF1_EQUIP_0:
 	echo DEF1_EQUIP_0:
 	echo
 	matchre DEF2 /you draw|re already holding|free to/i
-	matchre DEF1_EQUIP3 /out of reach|What were you|REMOVE|Wield what|can't seem|You can only wield a weapon or a shield/i
+	matchre DEF1_EQUIP3 /out of reach|What were you|remove|already w|Wield what|can't seem|You can only wield a weapon or a shield/i
 	matchre DEF1_EQUIP_0_PAUSE /\.\.\.wait|type ahead/i
 	match BEGIN_HANDS free hand
 put wield right my %1
@@ -6548,9 +6548,9 @@ BACK_EQUIP2:
 	echo
 	echo BACK_EQUIP2:
 	echo
-	matchre BACK1 /you draw|re already|free to/i
+	matchre BACK1 /you draw|re already h|free to/i
 	match BEGIN_HANDS free hand
-	matchre BACK_EQUIP2A /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre BACK_EQUIP2A /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	matchre BACK_EQUIP2_PAUSE /\.\.\.wait|type ahead/i
 put wield right my %1
 	matchwait
@@ -7563,7 +7563,7 @@ IF_2 goto EMPATH_EQUIP
 	IF_1 match EMPATH_APPRAISE re already holding
 	IF_1 match BEGIN_HANDS free hand
 	IF_1 match EMPATH_APPRAISE free to
-	IF_1 matchre EMPATH_E2 /out of reach|remove|What were you|can't seem|Wield what\?/i
+	IF_1 matchre EMPATH_E2 /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	IF_1 match EMPATH_E2 You can only wield a weapon or a shield!
 IF_1 put wield right my %1
 	IF_1 matchwait
@@ -7629,7 +7629,7 @@ EMPATH_EQUIP2:
 	match EMP_BRAWL re already holding
 	match BEGIN_HANDS free hand
 	match EMP_BRAWL free to
-	matchre EMPATH_EQUIP3 /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre EMPATH_EQUIP3 /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	match BEGIN_NOWEAP You can only wield a weapon or a shield!
 	match EMPATH_EQUIP2_PAUSE ...wait
 	match EMPATH_EQUIP2_PAUSE type ahead
@@ -7710,7 +7710,7 @@ IF_2 goto BRAWL_EQUIP
 	IF_1 match BRAWL_APPRAISE re already holding
 	IF_1 match BEGIN_HANDS free hand
 	IF_1 match BRAWL_APPRAISE free to
-	IF_1 matchre BRAWL_E2 /out of reach|remove|What were you|can't seem|Wield what\?/i
+	IF_1 matchre BRAWL_E2 /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	IF_1 match BRAWL_E2 You can only wield a weapon or a shield!
 IF_1 put wield right my %1
 	IF_1 matchwait
@@ -7777,7 +7777,7 @@ BRAWL_EQUIP2:
 	match BRA_BRAWL re already holding
 	match BEGIN_HANDS free hand
 	match BRA_BRAWL free to
-	matchre BRAWL_EQUIP3 /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre BRAWL_EQUIP3 /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	match BEGIN_NOWEAP You can only wield a weapon or a shield!
 	match BRAWL_EQUIP2_PAUSE ...wait
 	match BRAWL_EQUIP2_PAUSE type ahead
@@ -9850,7 +9850,7 @@ setvariable zHmonster MONSTER4B
 	matchre CLANCHIEF /raider (which appears dead|\(dead\))/i
 	matchre REIVER /reiver (which appears dead|\(dead\))/i
 	matchre WARCAT /warcat (which appears dead|\(dead\))/i
-	matchre CAIMAIN /caimain (which appears dead|\(dead\))/i
+	matchre CAIMAN /caiman (which appears dead|\(dead\))/i
 	matchre SCOUT /scout (which appears dead|\(dead\))/i
 	matchre BANDIT /bandit (which appears dead|\(dead\))/i
 	matchre BARGHEST /barghest (which appears dead|\(dead\))/i
@@ -9938,6 +9938,9 @@ setvariable zHmonster MONSTER6B
 	matchre IMP /imp (which appears dead|\(dead\))/i
 	matchre BUCCA /bucca (which appears dead|\(dead\))/i
 #temporary
+
+	matchre PRYDAEN /prydaen (which appears dead|\(dead\))/i
+	matchre RAKASH /rakash (which appears dead|\(dead\))/i
 	matchre MUTT /mutt (which appears dead|\(dead\))/i
 	matchre PEON /peon (which appears dead|\(dead\))/i
 #END Temp
@@ -10095,7 +10098,7 @@ echo
 	matchre CLANCHIEF /raider (which appears dead|\(dead\))/i
 	matchre REIVER /reiver (which appears dead|\(dead\))/i
 	matchre WARCAT /warcat (which appears dead|\(dead\))/i
-	matchre CAIMAIN /caimain (which appears dead|\(dead\))/i
+	matchre CAIMAN /caiman (which appears dead|\(dead\))/i
 	matchre SCOUT /scout (which appears dead|\(dead\))/i
 	matchre BANDIT /bandit (which appears dead|\(dead\))/i
 	matchre BARGHEST /barghest (which appears dead|\(dead\))/i
@@ -10214,19 +10217,33 @@ setvariable zHmonster MONSTER1
 	echo
 	goto NO_LOOT
 
+PRYDAEN:
+echo
+echo PRYDAEN:
+echo
+	setvariable zHkill prydaen
+	goto SEARCH
+
+RAKASH:
+echo
+echo RAKASH:
+echo
+	setvariable zHkill rakash
+	goto SEARCH
+
 PEON:
 echo
 echo PEON:
 echo
 	setvariable zHkill peon
-	goto SKIN_VARI_CHECK
+	goto SEARCH
 
 MUTT:
 echo
 echo MUTT:
 echo
 	setvariable zHkill mutt
-	goto SKIN_VARI_CHECK
+	goto SEARCH
 
 IMP:
 echo
@@ -11151,11 +11168,11 @@ echo
 
 	goto SKIN_VARI_CHECK
 
-CAIMAIN:
+CAIMAN:
 echo
-echo CAIMAIN:
+echo CAIMAN:
 echo
-	setvariable zHkill caimain
+	setvariable zHkill caiman
 
 	goto SKIN_VARI_CHECK
 
@@ -11617,7 +11634,7 @@ SKIN_BRAWLTYPE_SHIELD:
 	match SKIN_STOWA already holding
 	match SKIN_BRAWLTYPE_SHIELD_PAUSE ...wait
 	match SKIN_BRAWLTYPE_SHIELD_PAUSE type ahead
-	matchre NO_KNIFE /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre NO_KNIFE /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 put wield right my knife
 	matchwait
 
@@ -11630,7 +11647,7 @@ SKINTYPE_0:
 	match SKIN_SWAP1 already holding
 	match SKIN_TYPE_PAUSE ...wait
 	match SKIN_TYPE_PAUSE type ahead
-	matchre NO_KNIFE /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre NO_KNIFE /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 put wield left my knife
 	matchwait
 
@@ -11643,7 +11660,7 @@ SKINTYPE_OFFHAND:
 	match SKIN_OFF_PAUSE ...wait
 	match SKIN_OFF_PAUSE type ahead
 	match SKINTYPE_0 You need to have your right hand free to draw your 
-	matchre NO_KNIFE /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre NO_KNIFE /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 put wield right my knife
 	matchwait
 
@@ -11729,7 +11746,7 @@ SKIN_GO1:
 	match SKIN_GO2 already holding
 	match SKIN_GO1_PAUSE ...wait
 	match SKIN_GO1_PAUSE type ahead
-	matchre NO_KNIFE /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre NO_KNIFE /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 put wield left my knife
 	matchwait
 
@@ -12379,9 +12396,9 @@ K_SKIN_RE_EQUIP_OFFHAND:
 	echo
 	match KO_SEARCH you draw
 	match KO_SEARCH free to
-	match KO_SEARCH re already
+	match KO_SEARCH re already h
 	match NO_SKIN free hand
-	matchre K_SKIN_EQUIP_OFFHAND2 /out of reach|remove|What were you|can't seem|Wield what\?|You can only wield a weapon or a shield/i
+	matchre K_SKIN_EQUIP_OFFHAND2 /out of reach|remove|already w|What were you|can't seem|Wield what\?|You can only wield a weapon or a shield/i
 put wield left my %1
 	matchwait
 
@@ -12428,9 +12445,9 @@ K_SKIN_RE_EQUIP_0:
 	echo K_SKIN_RE_EQUIP_0:
 	echo
 	match K_SEARCH you draw
-	match K_SEARCH already
+	match K_SEARCH already h
 	match NO_SKIN free to
-	matchre K_SKIN_RE_EQUIP3 /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre K_SKIN_RE_EQUIP3 /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	match K_SKIN_RE_EQUIP3 You can only wield a weapon or a shield!
 	match K_SKIN_RE_EQUIP2_PAUSE ...wait
 	match K_SKIN_RE_EQUIP2_PAUSE type ahead
@@ -12498,9 +12515,9 @@ SKIN_RE_EQUIP_OFFHAND:
 	echo
 	match SEARCH you draw
 	match SEARCH free to
-	match SEARCH re already
+	match SEARCH re already h
 	match NO_SKIN free hand
-	matchre SKIN_EQUIP_OFFHAND2 /out of reach|remove|What were you|can't seem|Wield what\?|You can only wield a weapon or a shield/i
+	matchre SKIN_EQUIP_OFFHAND2 /out of reach|remove|already w|What were you|can't seem|Wield what\?|You can only wield a weapon or a shield/i
 put wield left my %1
 	matchwait
 
@@ -12555,9 +12572,9 @@ SKIN_RE_EQUIP_0:
 	echo SKIN_RE_EQUIP_0:
 	echo
 	match K_SEARCH you draw
-	match K_SEARCH re already
+	match K_SEARCH re already h
 	match NO_SKIN free to
-	matchre SKIN_RE_EQUIP3 /out of reach|remove|What were you|can't seem|Wield what\?/i
+	matchre SKIN_RE_EQUIP3 /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
 	match SKIN_RE_EQUIP3 You can only wield a weapon or a shield!
 	match SKIN_RE_EQUIP2_PAUSE ...wait
 	match SKIN_RE_EQUIP2_PAUSE type ahead
@@ -15130,7 +15147,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 4/23/2009 7:13PM
+	echo ** SFhunter Version 2: Last tweak 5/8/2009 1:43PM
 	echo **
 	echo **************************************************************************************
 	echo
