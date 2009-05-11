@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 5/8/2009 1:43PM
+echo Last tweak 5/11/2009 6:17PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -3947,7 +3947,7 @@ REPEAT_LOAD_RETREAT:
 	echo
 	echo REPEAT_LOAD_RETREAT:
 	echo
-	matchre REPEAT_PUSH /You cannot back away from a chance to continue your slaughter|You retreat |re already|You think|roundtime|You sneak back/i
+	matchre REPEAT_LOAD /You cannot back away from a chance to continue your slaughter|You retreat |re already|You think|roundtime|You sneak back/i
 	matchre RANGE_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead|\[You're/i
 	match FATIGUE_STAND You must stand first.
 put retreat
@@ -4633,7 +4633,7 @@ SNAP_REPEAT_LOAD_RETREAT:
 	echo
 	echo SNAP_REPEAT_LOAD_RETREAT:
 	echo
-	matchre SNAP_REPEAT_PUSH /You cannot back away from a chance to continue your slaughter|You retreat |re already|You think|roundtime|You sneak back/i
+	matchre SNAP_REPEAT_LOAD /You cannot back away from a chance to continue your slaughter|You retreat |re already|You think|roundtime|You sneak back/i
 	matchre SNAP_RANGE_LOAD_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead|\[You're/i
 	match FATIGUE_STAND You must stand first.
 put retreat
@@ -15147,7 +15147,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 5/8/2009 1:43PM
+	echo ** SFhunter Version 2: Last tweak 5/11/2009 6:17PM
 	echo **
 	echo **************************************************************************************
 	echo
