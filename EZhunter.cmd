@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 5/8/2009 1:42PM
+echo Last tweak 5/11/2009 7:17PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -147,7 +147,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 5/8/2009 1:42PM
+	echo ** EZhunter DR2v1: Last tweak 5/11/2009 7:17PM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -20509,7 +20509,7 @@ MONSTERLIST:
 	echo
 GOTO MONSTER1
 
-## 31/32
+## 32/32
 MONSTER1:
 echo
 echo MONSTER1
@@ -20541,9 +20541,10 @@ echo
 	match RAT1 rat which appears dead
 	match SPIDER1 wolf spider which appears dead
 	match BOOBRIE1 boobrie which appears dead
-	match MOTH1 MOTH which appears dead
-	match LARVA1 LARVA which appears dead
-	match WASP1 LARVA which appears dead
+	match MOTH1 moth which appears dead
+	match LARVA1 larva which appears dead
+	match WASP1 wasp which appears dead
+	match GRAVEROBBER1 graverobber which appears dead
 	match MONSTER2 s:
 put look
 	matchwait
@@ -20863,6 +20864,14 @@ echo
 	save wasp
 	counter add 100000
 	goto S_%c
+
+GRAVEROBBER1:
+echo
+echo GRAVEROBBER1:
+echo
+	save graverobber
+	counter add 100000
+	goto SEARCH
 
 DRYAD1:
 echo
@@ -25501,6 +25510,7 @@ echo
 	match LARVA larva which appears dead
 	match MOTH moth which appears dead
 	match WASP wasp which appears dead
+	match GRAVEROBBER graverobber which appears dead
 	match MONSTER2 s:
 put look
 	matchwait
@@ -45658,7 +45668,6 @@ echo
 echo SQUIRREL:
 echo
 	save squirrel
-
 	goto S_%c
 
 VULTURE:
@@ -45666,7 +45675,6 @@ echo
 echo VULTURE:
 echo
 	save vulture
-
 	goto S_%c
 
 KRA'HEI:
@@ -45674,7 +45682,6 @@ echo
 echo KRA'HEI:
 echo
 	save kra'hei
-
 	goto S_%c
 
 FENDRYAD:
@@ -45682,7 +45689,6 @@ echo
 echo FENDRYAD:
 echo
 	save fendryad
-
 	goto S_%c
 
 ELSRAEL:
@@ -45690,7 +45696,6 @@ echo
 echo ELSRAEL:
 echo
 	save elsrael
-
 	goto S_%c
 
 DYRACHIS:
@@ -45698,7 +45703,6 @@ echo
 echo DYRACHIS:
 echo
 	save dyrachis
-
 	goto S_%c
 
 LARVA:
@@ -45706,7 +45710,6 @@ echo
 echo LARVA:
 echo
 	save larva
-
 	goto S_%c
 
 WASP:
@@ -45714,8 +45717,15 @@ echo
 echo WASP:
 echo
 	save wasp
-
 	goto S_%c
+
+
+GRAVEROBBER:
+echo
+echo GRAVEROBBER:
+echo
+	save graverobber
+	goto SEARCH
 
 MOTH:
 echo

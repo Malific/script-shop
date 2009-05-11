@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 5/11/2009 6:17PM
+echo Last tweak 5/11/2009 7:16PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -9730,6 +9730,7 @@ setvariable zHmonster MONSTER1B
 	matchre MOTH /moth (which appears dead|\(dead\))/i
 	matchre LARVA /larva (which appears dead|\(dead\))/i
 	matchre WASP /wasp (which appears dead|\(dead\))/i
+	matchre GRAVEROBBER /graverobber (which appears dead|\(dead\))/i
 	matchre MONSTER2 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
 put look
@@ -9985,6 +9986,7 @@ echo
 	matchre MOTH /moth (which appears dead|\(dead\))/i
 	matchre LARVA /larva (which appears dead|\(dead\))/i
 	matchre WASP /wasp (which appears dead|\(dead\))/i
+	matchre GRAVEROBBER /graverobber (which appears dead|\(dead\))/i
 	matchre MONSTER2 /paths:|exits:/i
 	matchre SKIN_VARI_CHECK /and you can't see a thing|Your world is a crimson haze/i
 put look
@@ -10975,6 +10977,14 @@ echo
 	setvariable zHkill larva
 
 	goto SKIN_VARI_CHECK
+
+GRAVEROBBER:
+echo
+echo GRAVEROBBER:
+echo
+	setvariable zHkill graverobber
+
+	goto SEARCH
 
 CROCODILE:
 echo
@@ -15147,7 +15157,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 5/11/2009 6:17PM
+	echo ** SFhunter Version 2: Last tweak 5/11/2009 7:16PM
 	echo **
 	echo **************************************************************************************
 	echo
