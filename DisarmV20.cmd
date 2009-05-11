@@ -16,7 +16,7 @@ put echo /off
 waitfor echo
 echo
 echo DisarmV20
-echo Last Tweak 1/27/2009 10:01PM
+echo Last Tweak 5/11/2009 5:58PM
 echo
 echo SITE:  http://www.malific.com/
 echo AIM:   Malific Drockmur
@@ -1723,7 +1723,7 @@ pause
 	match DISCHECK has been peeled away from the hinges of the
 	match DISCHECK implies that some small round object was torn free and discarded.
 	match DISCHECK You see nothing of interest in the 
-	match DISCHECK Still grinning ridiculously is a tiny bronze face, loosened from the wood. Behind this metallic visage rests a small deflated bladder.
+	match DISCHECK Behind this metallic visage rests a small deflated bladder.
 	match DISCHECK It seems far enough away from the lock to be harmless. 
 	match DISCHECK You see what appears to be some sort of clay. The leading edge near the lock itself has been pulled away and whatever was inside, removed. 
 	match DISCHECK lock are sealed with dirt, blocking whatever would have come out.
@@ -3464,7 +3464,7 @@ put app my %s
 
 labelError:
 	echo **    DEBUG_MODE
-	echo ** Tweak: 1/27/2009 10:01PM
+	echo ** Tweak: 5/11/2009 5:58PM
 	echo ************************
 	echo **    Save = %s
 	echo ** Counter = %c
