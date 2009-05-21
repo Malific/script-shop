@@ -14335,7 +14335,7 @@ COM1_PAUSE:
 pause
 COM1_ON:
 	matchre COM1_PAUSE /\.\.\.wait|type ahead/i
-	match COM2_PAUSE roundtime
+	match COM2_PAUSE Roundtime:
 	match COM1_OFF Encumbrance :
 put %zHcom1
 put encum
@@ -14347,7 +14347,7 @@ COM2_PAUSE:
 pause
 COM2_ON:
 	matchre COM2_PAUSE /\.\.\.wait|type ahead/i
-	match COM3_PAUSE roundtime
+	match COM3_PAUSE Roundtime:
 	match COM2_OFF Encumbrance :
 put %zHcom2
 put encum
@@ -14359,7 +14359,7 @@ COM3_PAUSE:
 pause
 COM3_ON:
 	matchre COM3_PAUSE /\.\.\.wait|type ahead/i
-	match COM4_PAUSE roundtime
+	match COM4_PAUSE Roundtime:
 	match COM3_OFF Encumbrance :
 put %zHcom3
 put encum
@@ -14371,7 +14371,7 @@ COM4_PAUSE:
 pause
 COM4_ON:
 	matchre COM4_PAUSE /\.\.\.wait|type ahead/i
-	match COM5_PAUSE roundtime
+	match COM5_PAUSE Roundtime:
 	match COM4_OFF Encumbrance :
 put %zHcom4
 put encum
@@ -14383,7 +14383,7 @@ COM5_PAUSE:
 pause
 COM5_ON:
 	matchre COM5_PAUSE /\.\.\.wait|type ahead/i
-	match COM5_OFF roundtime
+	match COM5_OFF Roundtime:
 	match COM5_OFF Encumbrance :
 put %zHcom5
 put encum
