@@ -1026,7 +1026,7 @@ OFF_THROW_EQUIP:
 	echo
 	echo OFF_THROWN_EQUIP:
 	echo
-	match OFF_THROW_VARI you sling.
+	match OFF_THROW_VARI you sling
 	match OFF_THROW_VARI re already
 	match OFF_THROW_VARI inventory
 	match OFF_THROW_VARI you remove
@@ -1096,7 +1096,7 @@ THROW_EQUIP:
 	echo
 	echo THROWN_EQUIP:
 	echo
-	match THROW_VARI you sling.
+	match THROW_VARI you sling
 	match THROW_VARI re already
 	match THROW_VARI inventory
 	match THROW_VARI you remove
