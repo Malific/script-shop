@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 5/11/2009 7:17PM
+echo Last tweak 5/21/2009 6:53PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -147,7 +147,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 5/11/2009 7:17PM
+	echo ** EZhunter DR2v1: Last tweak 5/21/2009 6:53PM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -20975,7 +20975,7 @@ echo OGRE1:
 echo
 	counter add 100000
 	save ogre
-	goto S_%c
+	goto SEARCH
 
 BEAR1:
 echo
@@ -21978,7 +21978,7 @@ echo OGRE5:
 echo
 	save ogre
 	counter add 500000
-	goto S_%c
+	goto SEARCH
 
 HOUND5:
 echo
@@ -22130,7 +22130,7 @@ echo OGRE6:
 echo
 	counter add 600000
 	save ogre
-	goto S_%c
+	goto SEARCH
 
 GRYPHON6:
 echo
@@ -46145,7 +46145,7 @@ echo
 echo OGRE:
 echo
 	save ogre
-	goto S_%c
+	goto SEARCH
 
 
 SLUAGH:

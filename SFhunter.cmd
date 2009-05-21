@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 5/13/2009 5:24PM
+echo Last tweak 5/21/2009 6:53PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -10514,7 +10514,7 @@ echo
 
 
 	setvariable zHkill ogre
-	goto SKIN_VARI_CHECK
+	goto SEARCH
 
 BEAR:
 echo
@@ -15175,7 +15175,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 5/13/2009 5:24PM
+	echo ** SFhunter Version 2: Last tweak 5/21/2009 6:53PM
 	echo **
 	echo **************************************************************************************
 	echo
