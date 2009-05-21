@@ -3947,7 +3947,8 @@ REPEAT_LOAD_RETREAT:
 	echo
 	echo REPEAT_LOAD_RETREAT:
 	echo
-	matchre REPEAT_LOAD /You cannot back away from a chance to continue your slaughter|You retreat |re already|You think|roundtime|You sneak back/i
+	matchre REPEAT_LOAD /You cannot back away from a chance to continue your slaughter|You retreat |re already|roundtime|You sneak back/i
+	match RANGE_FIRE You think
 	matchre RANGE_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead|\[You're/i
 	match FATIGUE_STAND You must stand first.
 put retreat
@@ -4240,7 +4241,8 @@ RANGE_RETREAT:
 	echo
 	echo RANGE_RETREAT:
 	echo
-	matchre RANGE_%zHrange%_AIM /You cannot back away from a chance to continue your slaughter|You retreat |re already|You think|roundtime|You sneak back/i
+	matchre RANGE_%zHrange%_AIM /You cannot back away from a chance to continue your slaughter|You retreat |re already|roundtime|You sneak back/i
+	matchre RANGE_FIRE You Think
 	matchre RANGE_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead|\[You're/i
 	match FATIGUE_STAND You must stand first.
 put retreat
@@ -4253,7 +4255,8 @@ REPEAT_RETREAT:
 	echo
 	echo RANGE_RETREAT:
 	echo
-	matchre REPEAT_PUSH /You cannot back away from a chance to continue your slaughter|You retreat |re already|You think|roundtime|You sneak back/i
+	matchre REPEAT_PUSH /You cannot back away from a chance to continue your slaughter|You retreat |re already|roundtime|You sneak back/i
+	matchre RANGE_FIRE You Think
 	matchre REPEAT_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead|\[You're/i
 	match FATIGUE_STAND You must stand first.
 put retreat
@@ -4633,7 +4636,8 @@ SNAP_REPEAT_LOAD_RETREAT:
 	echo
 	echo SNAP_REPEAT_LOAD_RETREAT:
 	echo
-	matchre SNAP_REPEAT_LOAD /You cannot back away from a chance to continue your slaughter|You retreat |re already|You think|roundtime|You sneak back/i
+	matchre SNAP_REPEAT_LOAD /You cannot back away from a chance to continue your slaughter|You retreat |re already|roundtime|You sneak back/i
+	match SNAP_FIRE You think
 	matchre SNAP_RANGE_LOAD_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead|\[You're/i
 	match FATIGUE_STAND You must stand first.
 put retreat
@@ -4945,7 +4949,8 @@ SNAP_RETREAT:
 	echo
 	echo SNAP_RETREAT:
 	echo
-	matchre SNAP_%zHrange%_AIM /You cannot back away from a chance to continue your slaughter|You retreat |re already|You think|roundtime|You sneak back/i
+	matchre SNAP_%zHrange%_AIM /You cannot back away from a chance to continue your slaughter|You retreat |re already|roundtime|You sneak back/i
+	match SNAP_FIRE You think
 	matchre SNAP_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead|\[You're/i
 	match FATIGUE_STAND You must stand first.
 put retreat
@@ -9434,7 +9439,7 @@ MAGIC_RETREAT:
 	echo
 	echo MAGIC_RETREAT:
 	echo
-	matchre MAGIC_DEATH_ON /You cannot back away from a chance to continue your slaughter|You retreat |re already|You think|roundtime|You sneak back/i
+	matchre MAGIC_DEATH_ON /You cannot back away from a chance to continue your slaughter|You retreat |re already|roundtime|You sneak back/i
 	matchre MAGIC_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead/i
 	match STUN stunned
 	match FATIGUE_STAND You must stand first.
@@ -9630,7 +9635,7 @@ SN_MAGIC_RETREAT:
 	echo
 	echo SN_MAGIC_RETREAT:
 	echo
-	matchre SN_MAGIC_DEATH /You cannot back away from a chance to continue your slaughter|You retreat from combat|re already|You think|You sneak back/i
+	matchre SN_MAGIC_DEATH /You cannot back away from a chance to continue your slaughter|You retreat from combat|re already|You sneak back/i
 	match SN_MAGIC_DEATH_PAUSE roundtime
 	matchre SN_MAGIC_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead/i
 	match STUN stunned
