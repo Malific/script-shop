@@ -91924,9 +91924,9 @@ NOBUN2:
 	match DROP_TAIL tail in your left hand
 	match DROP_TUSK tusk in your left hand
 	match DROP_STRIPE stripe in your left hand
-	match DROP_SPINNER spinneret in your left hand
 	match DROP_TALON talon in your left hand
-	match DROP_CATGUT catgut in your left hand
+	match DROP_BEAK beak in your left hand
+	match DROP_MILK milk-tooth in your left hand
 	match DROP2 left hand.
 	match NOBUN2_PAUSE ...wait
 	match NOBUN2_PAUSE type ahead
@@ -91940,6 +91940,8 @@ DROP2:
 	echo
 	echo DROP2:
 	echo
+	match DROP_SPINNER spinneret in your left hand
+	match DROP_CATGUT catgut in your left hand
 	match DROP_QUILL quill in your left hand
 	match DROP_FANG fang in your left hand
 	match DROP_TOOTH tooth in your left hand
@@ -91952,7 +91954,6 @@ DROP2:
 	match DROP_EAR ears in your left hand
 	match DROP_FANG fangs in your left hand
 	match DROP_STINGER stinger in your left hand
-	match DROP_BEAK beak in your left hand
 #beaks not neccesary?
 	match DROP_BEAK beaks in your left hand
 	match SKIN_FAIL left hand.
@@ -91985,6 +91986,17 @@ BUNDONE:
 	match REMBUN you aren't holding that
 	match SKIN_RE_EQUIP you drop
 put drop my bun
+	matchwait
+
+DROP_MILK:
+	echo
+	echo DROP_MILK:
+	echo
+	match SKIN_RE_EQUIP You drop
+	match NOBUN2 What were you
+	match NOBUN2 could not
+	match NOBUN2 But you
+put drop my milk-tooth
 	matchwait
 
 DROP_BEAK:

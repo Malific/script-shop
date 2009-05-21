@@ -12059,6 +12059,7 @@ NOBUN2:
 	echo NOBUN2:
 	echo
 	matchre SKIN_FAIL /nothing in your left hand|your empty hands./i
+	match DROP_MILK milk-tooth in your left hand
 	matchre DROP_WING /wing in your left hand|wings in your left hand/i
 	matchre DROP_FEATHER /feather in your left hand|feathers in your left hand/i
 	matchre DROP_SHELL /shell in your left hand|shells in your left hand/i
@@ -12124,6 +12125,13 @@ BUNDONE:
 	match SKIN_RE_EQUIP you drop
 put drop my bun
 	matchwait
+
+DROP_MILK:
+	echo
+	echo DROP_MILK:
+	echo
+setvariable zHskin2 milk-tooth
+goto DROP2
 
 DROP_BEAK:
 	echo
