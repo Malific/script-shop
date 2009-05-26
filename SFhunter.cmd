@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 5/21/2009 6:53PM
+echo Last tweak 5/25/2009 10:52PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -119,7 +119,8 @@ BEGIN:
 	match WEAPON_CHECK re already holding
 	match BEGIN_HANDS free hand
 	match WEAPON_CHECK free to
-	matchre BEGINA /out of reach|remove|already w|What were you|can't seem|Wield what\?/i
+	matchre BEGINA /out of reach|remove|already w|What were you|can't seem/i
+	match VARI_CHECK Wield what?
 	match BEGINA You can only wield a weapon or a shield!
 	match BEGIN_PAUSE ...wait
 	match BEGIN_PAUSE type ahead
@@ -11275,7 +11276,7 @@ echo SOUL:
 echo
 	setvariable zHkill soul
 
-	goto SKIN_VARI_CHECK
+	goto SEARCH
 
 HAFWA:
 echo
@@ -15175,7 +15176,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 5/21/2009 6:53PM
+	echo ** SFhunter Version 2: Last tweak 5/25/2009 10:52PM
 	echo **
 	echo **************************************************************************************
 	echo
