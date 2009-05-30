@@ -4243,7 +4243,7 @@ RANGE_RETREAT:
 	echo RANGE_RETREAT:
 	echo
 	matchre RANGE_%zHrange%_AIM /You cannot back away from a chance to continue your slaughter|You retreat |re already|roundtime|You sneak back/i
-	matchre RANGE_FIRE You Think
+	match RANGE_FIRE You Think
 	matchre RANGE_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead|\[You're/i
 	match FATIGUE_STAND You must stand first.
 put retreat
@@ -4257,7 +4257,7 @@ REPEAT_RETREAT:
 	echo RANGE_RETREAT:
 	echo
 	matchre REPEAT_PUSH /You cannot back away from a chance to continue your slaughter|You retreat |re already|roundtime|You sneak back/i
-	matchre RANGE_FIRE You Think
+	match RANGE_FIRE You Think
 	matchre REPEAT_RETREAT_PAUSE /stop advancing|\.\.\.wait|type ahead|\[You're/i
 	match FATIGUE_STAND You must stand first.
 put retreat
@@ -9707,7 +9707,7 @@ echo
 setvariable zHmonster MONSTER1B
 	matchre TROLL_2 /wood troll (which appears dead|\(dead\))/i
 	matchre GOBLIN /goblin (which appears dead|\(dead\))/i
-	matchre HOG /musk hog (which appears dead|\(dead\))/i
+	matchre HOG /hog (which appears dead|\(dead\))/i
 	matchre MADMAN /crazed madman (which appears dead|\(dead\))/i
 	matchre GRENDEL /grendel (which appears dead|\(dead\))/i
 	matchre COUGAR /cougar (which appears dead|\(dead\))/i
@@ -9963,7 +9963,7 @@ echo MONSTER1B:
 echo
 	matchre TROLL_2 /wood troll (which appears dead|\(dead\))/i
 	matchre GOBLIN /goblin (which appears dead|\(dead\))/i
-	matchre HOG /musk hog (which appears dead|\(dead\))/i
+	matchre HOG /hog (which appears dead|\(dead\))/i
 	matchre MADMAN /crazed madman (which appears dead|\(dead\))/i
 	matchre GRENDEL /grendel (which appears dead|\(dead\))/i
 	matchre COUGAR /cougar (which appears dead|\(dead\))/i
@@ -11253,7 +11253,7 @@ echo
 	match SEARCH_NEXT not dead
 	match SEARCH_NEXT It's still alive
 	match NO_LOOT picked clean
-	match NO_LOOT It carried nothing of interest.
+	match NO_LOOT nothing of interest.
 	match LOOT_LOOK You search
 	match LOOT_LOOK roundtime
 	match GUARDIAN_PAUSE ...wait
@@ -11553,6 +11553,7 @@ goto %zHarrange
 
 ARR_YES:
 	match %zHretreat you can't
+	match SEARCH cannot be skinned
 	match SKIN1B already been skinned
 	match SKIN1B You might want to kill it first
 	match SKIN1__PAUSE has already
@@ -11571,6 +11572,7 @@ SKIN1B:
 	echo SKIN1B:
 	echo
 	match %zHretreat You might want to kill it first
+	match SEARCH cannot be skinned
 	match SKIN_FAIL already been skinned
 	match SKIN1__PAUSE has already
 	match SKIN1__PAUSE roundtime
@@ -12665,7 +12667,7 @@ SEARCH:
 	match SEARCH_NEXT not dead
 	match SEARCH_NEXT It's still alive
 	match NO_LOOT picked clean
-	match NO_LOOT It carried nothing of interest.
+	match NO_LOOT nothing of interest.
 	match LOOT_LOOK You search
 	match LOOT_LOOK roundtime
 	match SEARCH_PAUSE ...wait
@@ -12673,6 +12675,25 @@ SEARCH:
 	match SEARCH_PAUSE roundtime
 put loot %zHsearch
 	matchwait
+goto SEARCH_BOX_%zHlootbox
+
+SEARCH_BOX_0:
+	matchre LOOT_BOXES / strongbox,| strongbox\.| strongbox and | coffer,| coffer\.| coffer and | chest,| chest\.| chest and | caddy,| caddy\.| caddy and | casket,| casket\.| casket and | trunk,| trunk\.| trunk and | skippet,| skippet\.| skippet and | crate,| crate\.| crate and | box,| box\.| box and /i
+SEARCH_BOX_1:
+goto SEARCH_GEM_%zHlootgem
+
+SEARCH_GEM_0:
+	matchre LOOT_GEMS / carnelian,| carnelian\.| carnelian and | chrysoprase,| chrysoprase\.| chrysoprase and | amber,| amber\.| amber and | kunzite,| kunzite\.| kunzite and | iolite,| iolite\.| iolite and | coral,| coral\.| coral and | ivory,| ivory\.| ivory and | spinel,| spinel\.| spinel and | onyx,| onyx\.| onyx and | garnet,| garnet\.| garnet and | chalcedony,| chalcedony\.| chalcedony and | lazuli,| lazuli\.| lazuli and | star-stone,| star-stone\.| star-stone and | sunstone,| sunstone\.| sunstone and | moonstone,| moonstone\.| moonstone and | hematite,| hematite\.| hematite and | tanzanite,| tanzanite\.| tanzanite and | turquoise,| turquoise\.| turquoise and | peridot,| peridot\.| peridot and | beryl,| beryl\.| beryl and | andalusite,| andalusite\.| andalusite and | agate,| agate\.| agate and | jade,| jade\.| jade and | citrine,| citrine\.| citrine and | aquamarine,| aquamarine\.| aquamarine and /i
+#added Above gems - TY Storrmm Wyndrydor
+	matchre LOOT_GEMS / pearl,| pearl\.| pearl and | sapphire,| sapphire\.| sapphire and | opal,| opal\.| opal and | bloodstone,| bloodstone\.| bloodstone and | nugget,| nugget\.| nugget and | zircon,| zircon\.| zircon and | amethyst,| amethyst\.| amethyst and | quartz,| quartz\.| quartz and | jasper,| jasper\.| jasper and | bloodgem,| bloodgem\.| bloodgem and | crystal,| crystal\.| crystal and | topaz,| topaz\.| topaz and | ruby,| ruby\.| ruby and | diopside,| diopside\.| diopside and | gem,| gem\.| gem and | emerald,| emerald\.| emerald and | diamond,| diamond\.| diamond and | stone,| stone\.| stone and | stones,| stones\.| stones and /i
+SEARCH_GEM_1:
+goto SEARCH_COIN_%zHlootcoin
+
+SEARCH_COIN_0:
+	matchre LOOT_COIN / coin,| coins,| coin\.| coin and | coins\.| coins and /i
+
+SEARCH_COIN_1:
+	match LOOT_LOOK was carrying
 
 SEARCH_NEXT_PAUSE:
 pause
@@ -12685,7 +12706,7 @@ SEARCH_NEXT:
 	match SEARCH_NEXT2 not dead
 	match SEARCH_NEXT2 It's still alive
 	match NO_LOOT picked clean
-	match NO_LOOT It carried nothing of interest.
+	match NO_LOOT nothing of interest.
 	match LOOT_LOOK You search
 	match LOOT_LOOK roundtime
 	match SEARCH_NEXT_PAUSE ...wait
@@ -12705,7 +12726,7 @@ SEARCH_NEXT2:
 	match NO_LOOT not dead
 	match NO_LOOT It's still alive
 	match NO_LOOT picked clean
-	match NO_LOOT It carried nothing of interest.
+	match NO_LOOT nothing of interest.
 	match LOOT_LOOK You search
 	match LOOT_LOOK roundtime
 	match SEARCH_NEXT2_PAUSE ...wait
@@ -12725,7 +12746,7 @@ SEARCH_NEXT_NOSKIN:
 	match SEARCH_NOSKIN_NEXT2 not dead
 	match SEARCH_NOSKIN_NEXT2 It's still alive
 	match NO_LOOT picked clean
-	match NO_LOOT It carried nothing of interest.
+	match NO_LOOT nothing of interest.
 	match LOOT_LOOK You search
 	match LOOT_LOOK roundtime
 	match SEARCH_NEXT_NOSKIN_PAUSE ...wait
@@ -12745,7 +12766,7 @@ SEARCH_NEXT2_NOSKIN:
 	match NO_LOOT not dead
 	match NO_LOOT It's still alive
 	match NO_LOOT picked clean
-	match NO_LOOT It carried nothing of interest.
+	match NO_LOOT nothing of interest.
 	match LOOT_SEARCH You search
 	match LOOT_SEARCH roundtime
 	match SEARCH_NEXT_PAUSE ...wait
@@ -13785,13 +13806,15 @@ LOOT_STOW:
 put stow %s
 	matchwait
 
-
+LOOT_COIN_PAUSE:
+pause
 LOOT_COIN:
-put get coin
-waitfor you
-put get coin
-waitfor you
-	goto LOOTING_PAUSE
+	match LOOT_COIN_PAUSE ...wait
+	match LOOT_COIN_PAUSE type ahead
+	match LOOT_COIN You pick up
+	match LOOTING_PAUSE I could not find
+put loot coin
+	matchwait
 
 LOOT_LOOK_NO:
 	echo
@@ -14344,7 +14367,7 @@ COM1_PAUSE:
 pause
 COM1_ON:
 	matchre COM1_PAUSE /\.\.\.wait|type ahead/i
-	match COM2_PAUSE Roundtime:
+	match COM1_OFF Roundtime:
 	match COM1_OFF Encumbrance :
 put %zHcom1
 put encum
@@ -14356,7 +14379,7 @@ COM2_PAUSE:
 pause
 COM2_ON:
 	matchre COM2_PAUSE /\.\.\.wait|type ahead/i
-	match COM3_PAUSE Roundtime:
+	match COM2_OFF Roundtime:
 	match COM2_OFF Encumbrance :
 put %zHcom2
 put encum
@@ -14368,7 +14391,7 @@ COM3_PAUSE:
 pause
 COM3_ON:
 	matchre COM3_PAUSE /\.\.\.wait|type ahead/i
-	match COM4_PAUSE Roundtime:
+	match COM3_OFF Roundtime:
 	match COM3_OFF Encumbrance :
 put %zHcom3
 put encum
@@ -14380,7 +14403,7 @@ COM4_PAUSE:
 pause
 COM4_ON:
 	matchre COM4_PAUSE /\.\.\.wait|type ahead/i
-	match COM5_PAUSE Roundtime:
+	match COM4_OFF Roundtime:
 	match COM4_OFF Encumbrance :
 put %zHcom4
 put encum

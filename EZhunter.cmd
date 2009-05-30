@@ -20516,7 +20516,7 @@ echo MONSTER1
 echo
 	match TROLL1 troll which appears dead
 	match GOBLIN1 goblin which appears dead
-	match HOG1 musk hog which appears dead
+	match HOG1 hog which appears dead
 	match MADMAN1 crazed madman which appears dead
 	match GRENDEL1 grendel which appears dead
 	match COUGAR1 cougar which appears dead
@@ -25482,7 +25482,7 @@ echo MONSTER_GROUP_1
 echo
 	match TROLL troll which appears dead
 	match GOBLIN goblin which appears dead
-	match HOG musk hog which appears dead
+	match HOG hog which appears dead
 	match MADMAN crazed madman which appears dead
 	match GRENDEL grendel which appears dead
 	match COUGAR cougar which appears dead
