@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 5/25/2009 10:52PM
+echo Last tweak 5/29/2009 8:41PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -4500,7 +4500,7 @@ RANGE_2_FIRE:
 	match RANGE_RETREAT2_PAUSE roundtime
 	matchre DEAD_MONSTER /balance\]|balanced\]|isn't what you|referring/i
 	matchre RANGE_2_FIRE_PAUSE /\.\.\.wait|type ahead/i
-	matchre RANGE_FIRE /must be hidden|not trained|stalking|You can not poach|you are not hidden/i
+	matchre RANGE_FIRE /must be hidden|not trained|not been trained|stalking|You can not poach|you are not hidden/i
 put %zHrange1
 	matchwait
 
@@ -15199,7 +15199,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 5/25/2009 10:52PM
+	echo ** SFhunter Version 2: Last tweak 5/29/2009 8:41PM
 	echo **
 	echo **************************************************************************************
 	echo
