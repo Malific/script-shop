@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 5/25/2009 10:52PM
+echo Last tweak 6/6/2009 12:32PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -147,7 +147,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 5/25/2009 10:52PM
+	echo ** EZhunter DR2v1: Last tweak 6/6/2009 12:32PM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -72131,7 +72131,7 @@ SKIN1:
 	match SKIN1_ Ranger
 	match SKIN1_PAUSE ...wait
 	match SKIN1_PAUSE type ahead
-put arrange %s
+put arrange all
 	matchwait
 
 SKIN1B_PAUSE:
@@ -72147,7 +72147,7 @@ SKIN1B:
 	match SKIN1_ Ranger
 	match SKIN1B_PAUSE ...wait
 	match SKIN1B_PAUSE type ahead
-put arrange other %s
+put arrange other %s all
 	matchwait
 
 
