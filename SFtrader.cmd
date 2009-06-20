@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo SFtrader
-echo Last tweak 6/6/2009 12:53PM
+echo Last tweak 6/20/2009 12:13PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -3082,8 +3082,8 @@ put stand
 	matchwait
 
 CLIMB8:
-	CLIMB8B You can't go there
-	CLIMB8A some stone stairs leading to the roadway below
+	match CLIMB8B You can't go there
+	match CLIMB8A some stone stairs leading to the roadway below
 put w
 	matchwait
 CLIMB8B
@@ -5087,7 +5087,7 @@ STUDY_COM1_FERRY:
 echo
 echo STUDY_COM1_FERRY:
 echo
-	match STUDY_COM1_TURN_FERRY Why do you need to study this chart again?
+	match STUDY_COM2_TURN_FERRY Why do you need to study this chart again?
 	match STUDY_COM2_TURN_FERRY sudden moment of clarity
 	match STUDY_COM5_TURN_FERRY difficult time
 	match STUDY_COM5_TURN_FERRY impossible
@@ -5113,7 +5113,7 @@ STUDY_COM2_FERRY:
 echo
 echo STUDY_COM2_FERRY:
 echo
-	match STUDY_COM2_TURN_FERRY Why do you need to study this chart again?
+	match STUDY_COM3_TURN_FERRY Why do you need to study this chart again?
 	match STUDY_COM3_TURN_FERRY sudden moment of clarity
 	match STUDY_COM_STOW_FERRY difficult time
 	match STUDY_COM_STOW_FERRY impossible
@@ -5139,7 +5139,7 @@ STUDY_COM3_FERRY:
 echo
 echo STUDY_COM3_FERRY:
 echo
-	match STUDY_COM3_TURN_FERRY Why do you need to study this chart again?
+	match STUDY_COM4_TURN_FERRY Why do you need to study this chart again?
 	match STUDY_COM4_TURN_FERRY sudden moment of clarity
 	match STUDY_COM_STOW_FERRY difficult time
 	match STUDY_COM_STOW_FERRY impossible
@@ -5165,7 +5165,7 @@ STUDY_COM4_FERRY:
 echo
 echo STUDY_COM4_FERRY:
 echo
-	match STUDY_COM4_TURN_FERRY Why do you need to study this chart again?
+	match STUDY_COM5_TURN_FERRY Why do you need to study this chart again?
 	match STUDY_COM5_TURN_FERRY sudden moment of clarity
 	match STUDY_COM_STOW_FERRY difficult time
 	match STUDY_COM_STOW_FERRY impossible
@@ -5191,7 +5191,7 @@ STUDY_COM5_FERRY:
 echo
 echo STUDY_COM5_FERRY:
 echo
-	match STUDY_COM5_TURN_FERRY Why do you need to study this chart again?
+	match STUDY_COM_STOW_FERRY Why do you need to study this chart again?
 	match STUDY_COM_STOW_FERRY sudden moment of clarity
 	match STUDY_COM_STOW_FERRY difficult time
 	match STUDY_COM_STOW_FERRY impossible
@@ -6741,7 +6741,7 @@ STUDY_COM1_ARTHE:
 echo
 echo STUDY_COM1_ARTHE:
 echo
-	match STUDY_COM1_TURN_ARTHE Why do you need to study this chart again?
+	match STUDY_COM2_TURN_ARTHE Why do you need to study this chart again?
 	match STUDY_COM2_TURN_ARTHE sudden moment of clarity
 	match STUDY_COM5_TURN_ARTHE difficult time
 	match STUDY_COM5_TURN_ARTHE impossible
@@ -6767,7 +6767,7 @@ STUDY_COM2_ARTHE:
 echo
 echo STUDY_COM2_ARTHE:
 echo
-	match STUDY_COM2_TURN_ARTHE Why do you need to study this chart again?
+	match STUDY_COM3_TURN_ARTHE Why do you need to study this chart again?
 	match STUDY_COM3_TURN_ARTHE sudden moment of clarity
 	match STUDY_COM_STOW_ARTHE difficult time
 	match STUDY_COM_STOW_ARTHE impossible
@@ -6793,7 +6793,7 @@ STUDY_COM3_ARTHE:
 echo
 echo STUDY_COM3_ARTHE:
 echo
-	match STUDY_COM3_TURN_ARTHE Why do you need to study this chart again?
+	match STUDY_COM4_TURN_ARTHE Why do you need to study this chart again?
 	match STUDY_COM4_TURN_ARTHE sudden moment of clarity
 	match STUDY_COM_STOW_ARTHE difficult time
 	match STUDY_COM_STOW_ARTHE impossible
@@ -6819,7 +6819,7 @@ STUDY_COM4_ARTHE:
 echo
 echo STUDY_COM4_ARTHE:
 echo
-	match STUDY_COM4_TURN_ARTHE Why do you need to study this chart again?
+	match STUDY_COM5_TURN_ARTHE Why do you need to study this chart again?
 	match STUDY_COM5_TURN_ARTHE sudden moment of clarity
 	match STUDY_COM_STOW_ARTHE difficult time
 	match STUDY_COM_STOW_ARTHE impossible
@@ -6845,7 +6845,7 @@ STUDY_COM5_ARTHE:
 echo
 echo STUDY_COM5_ARTHE:
 echo
-	match STUDY_COM5_TURN_ARTHE Why do you need to study this chart again?
+	match STUDY_COM_STOW_ARTHE Why do you need to study this chart again?
 	match STUDY_COM_STOW_ARTHE sudden moment of clarity
 	match STUDY_COM_STOW_ARTHE difficult time
 	match STUDY_COM_STOW_ARTHE impossible
@@ -12121,7 +12121,7 @@ STUDY_COM1_DIRGE:
 echo
 echo STUDY_COM1_DIRGE:
 echo
-	match STUDY_COM1_TURN_DIRGE Why do you need to study this chart again?
+	match STUDY_COM2_TURN_DIRGE Why do you need to study this chart again?
 	match STUDY_COM2_TURN_DIRGE sudden moment of clarity
 	match STUDY_COM5_TURN_DIRGE difficult time
 	match STUDY_COM5_TURN_DIRGE impossible
@@ -12147,7 +12147,7 @@ STUDY_COM2_DIRGE:
 echo
 echo STUDY_COM2_DIRGE:
 echo
-	match STUDY_COM2_TURN_DIRGE Why do you need to study this chart again?
+	match STUDY_COM3_TURN_DIRGE Why do you need to study this chart again?
 	match STUDY_COM3_TURN_DIRGE sudden moment of clarity
 	match STUDY_COM_STOW_DIRGE difficult time
 	match STUDY_COM_STOW_DIRGE impossible
@@ -12173,7 +12173,7 @@ STUDY_COM3_DIRGE:
 echo
 echo STUDY_COM3_DIRGE:
 echo
-	match STUDY_COM3_TURN_DIRGE Why do you need to study this chart again?
+	match STUDY_COM4_TURN_DIRGE Why do you need to study this chart again?
 	match STUDY_COM4_TURN_DIRGE sudden moment of clarity
 	match STUDY_COM_STOW_DIRGE difficult time
 	match STUDY_COM_STOW_DIRGE impossible
@@ -12199,7 +12199,7 @@ STUDY_COM4_DIRGE:
 echo
 echo STUDY_COM4_DIRGE:
 echo
-	match STUDY_COM4_TURN_DIRGE Why do you need to study this chart again?
+	match STUDY_COM5_TURN_DIRGE Why do you need to study this chart again?
 	match STUDY_COM5_TURN_DIRGE sudden moment of clarity
 	match STUDY_COM_STOW_DIRGE difficult time
 	match STUDY_COM_STOW_DIRGE impossible
@@ -12225,7 +12225,7 @@ STUDY_COM5_DIRGE:
 echo
 echo STUDY_COM5_DIRGE:
 echo
-	match STUDY_COM5_TURN_DIRGE Why do you need to study this chart again?
+	match STUDY_COM_STOW_DIRGE Why do you need to study this chart again?
 	match STUDY_COM_STOW_DIRGE sudden moment of clarity
 	match STUDY_COM_STOW_DIRGE difficult time
 	match STUDY_COM_STOW_DIRGE impossible
@@ -13467,7 +13467,7 @@ STUDY_COM1_INTER:
 echo
 echo STUDY_COM1_INTER:
 echo
-	match STUDY_COM1_TURN_INTER Why do you need to study this chart again?
+	match STUDY_COM2_TURN_INTER Why do you need to study this chart again?
 	match STUDY_COM2_TURN_INTER sudden moment of clarity
 	match STUDY_COM5_TURN_INTER difficult time
 	match STUDY_COM5_TURN_INTER impossible
@@ -13493,7 +13493,7 @@ STUDY_COM2_INTER:
 echo
 echo STUDY_COM2_INTER:
 echo
-	match STUDY_COM2_TURN_INTER Why do you need to study this chart again?
+	match STUDY_COM3_TURN_INTER Why do you need to study this chart again?
 	match STUDY_COM3_TURN_INTER sudden moment of clarity
 	match STUDY_COM_STOW_INTER difficult time
 	match STUDY_COM_STOW_INTER impossible
@@ -13519,7 +13519,7 @@ STUDY_COM3_INTER:
 echo
 echo STUDY_COM3_INTER:
 echo
-	match STUDY_COM3_TURN_INTER Why do you need to study this chart again?
+	match STUDY_COM4_TURN_INTER Why do you need to study this chart again?
 	match STUDY_COM4_TURN_INTER sudden moment of clarity
 	match STUDY_COM_STOW_INTER difficult time
 	match STUDY_COM_STOW_INTER impossible
@@ -13545,7 +13545,7 @@ STUDY_COM4_INTER:
 echo
 echo STUDY_COM4_INTER:
 echo
-	match STUDY_COM4_TURN_INTER Why do you need to study this chart again?
+	match STUDY_COM5_TURN_INTER Why do you need to study this chart again?
 	match STUDY_COM5_TURN_INTER sudden moment of clarity
 	match STUDY_COM_STOW_INTER difficult time
 	match STUDY_COM_STOW_INTER impossible
@@ -13571,7 +13571,7 @@ STUDY_COM5_INTER:
 echo
 echo STUDY_COM5_INTER:
 echo
-	match STUDY_COM5_TURN_INTER Why do you need to study this chart again?
+	match STUDY_COM_STOW_INTER Why do you need to study this chart again?
 	match STUDY_COM_STOW_INTER sudden moment of clarity
 	match STUDY_COM_STOW_INTER difficult time
 	match STUDY_COM_STOW_INTER impossible
@@ -14681,7 +14681,7 @@ T_STUDY_COM1:
 	echo
 	echo STUDY_COM1:
 	echo
-	match T_STUDY_COM1_TURN Why do you need to study this chart again?
+	match T_STUDY_COM2_TURN Why do you need to study this chart again?
 	match T_STUDY_COM2_TURN sudden moment of clarity
 	match T_STUDY_COM3_TURN difficult time
 	match T_STUDY_COM3_TURN impossible
@@ -14707,7 +14707,7 @@ T_STUDY_COM2:
 	echo
 	echo STUDY_COM2:
 	echo
-	match T_STUDY_COM2_TURN Why do you need to study this chart again?
+	match T_STUDY_COM3_TURN Why do you need to study this chart again?
 	match T_STUDY_COM3_TURN sudden moment of clarity
 	match T_STUDY_COM4_TURN difficult time
 	match T_STUDY_COM4_TURN impossible
@@ -14733,7 +14733,7 @@ T_STUDY_COM3:
 	echo
 	echo STUDY_COM3:
 	echo
-	match T_STUDY_COM3_TURN Why do you need to study this chart again?
+	match T_STUDY_COM4_TURN Why do you need to study this chart again?
 	match T_STUDY_COM4_TURN sudden moment of clarity
 	match T_STUDY_COM5_TURN difficult time
 	match T_STUDY_COM5_TURN impossible
@@ -14759,7 +14759,7 @@ T_STUDY_COM4:
 	echo
 	echo STUDY_COM4:
 	echo
-	match T_STUDY_COM4_TURN Why do you need to study this chart again?
+	match T_STUDY_COM5_TURN Why do you need to study this chart again?
 	match T_STUDY_COM5_TURN sudden moment of clarity
 	match T_STUDY_COM_STOW difficult time
 	match T_STUDY_COM_STOW impossible
@@ -14785,7 +14785,7 @@ T_STUDY_COM5:
 	echo
 	echo STUDY_COM5:
 	echo
-	match T_STUDY_COM5_TURN Why do you need to study this chart again?
+	match T_STUDY_COM_STOW Why do you need to study this chart again?
 	match T_STUDY_COM_STOW sudden moment of clarity
 	match T_STUDY_COM_STOW difficult time
 	match T_STUDY_COM_STOW impossible
@@ -16105,7 +16105,7 @@ P_STUDY_COM1:
 	echo
 	echo STUDY_COM1:
 	echo
-	match P_STUDY_COM1_TURN Why do you need to study this chart again?
+	match P_STUDY_COM2_TURN Why do you need to study this chart again?
 	match P_STUDY_COM2_TURN sudden moment of clarity
 	match P_STUDY_COM3_TURN difficult time
 	match P_STUDY_COM3_TURN impossible
@@ -16131,7 +16131,7 @@ P_STUDY_COM2:
 	echo
 	echo STUDY_COM2:
 	echo
-	match P_STUDY_COM2_TURN Why do you need to study this chart again?
+	match P_STUDY_COM3_TURN Why do you need to study this chart again?
 	match P_STUDY_COM3_TURN sudden moment of clarity
 	match P_STUDY_COM4_TURN difficult time
 	match P_STUDY_COM4_TURN impossible
@@ -16157,7 +16157,7 @@ P_STUDY_COM3:
 	echo
 	echo STUDY_COM3:
 	echo
-	match P_STUDY_COM3_TURN Why do you need to study this chart again?
+	match P_STUDY_COM4_TURN Why do you need to study this chart again?
 	match P_STUDY_COM4_TURN sudden moment of clarity
 	match P_STUDY_COM5_TURN difficult time
 	match P_STUDY_COM5_TURN impossible
@@ -16183,7 +16183,7 @@ P_STUDY_COM4:
 	echo
 	echo STUDY_COM4:
 	echo
-	match P_STUDY_COM4_TURN Why do you need to study this chart again?
+	match P_STUDY_COM5_TURN Why do you need to study this chart again?
 	match P_STUDY_COM5_TURN sudden moment of clarity
 	match P_STUDY_COM_STOW difficult time
 	match P_STUDY_COM_STOW impossible
@@ -16209,7 +16209,7 @@ P_STUDY_COM5:
 	echo
 	echo STUDY_COM5:
 	echo
-	match P_STUDY_COM5_TURN Why do you need to study this chart again?
+	match P_STUDY_COM_STOW Why do you need to study this chart again?
 	match P_STUDY_COM_STOW sudden moment of clarity
 	match P_STUDY_COM_STOW difficult time
 	match P_STUDY_COM_STOW impossible
@@ -22204,7 +22204,7 @@ LABELERROR:
 	echo
 	echo ** Copy/Paste DEBUG_MODE and the game window from the last oupost you left.
 	echo ***********************************************************
-	echo ** SFtrader: Last tweak 6/6/2009 12:53PM
+	echo ** SFtrader: Last tweak 6/20/2009 12:13PM
 	echo ** Variables:
 	echo **        1 = %1
 IF_2	echo **        2 = %2

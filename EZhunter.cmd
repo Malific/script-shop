@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 6/6/2009 12:32PM
+echo Last tweak 6/20/2009 11:59AM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -147,7 +147,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 6/6/2009 12:32PM
+	echo ** EZhunter DR2v1: Last tweak 6/20/2009 11:59AM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -20526,7 +20526,7 @@ echo
 	match BOGGLE1 boggle which appears dead
 	match KOBOLD1 kobold which appears dead
 	match JACKAL1 jackal which appears dead
-	match EEL5 grass eel which appears dead
+	match EEL1 grass eel which appears dead
 	match SHAMAN1 goblin shaman which appears dead
 	match BOAR1 boar which appears dead
 	match KELPIE1 kelpie which appears dead

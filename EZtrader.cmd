@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZtrader
-echo Last tweak 6/6/2009 12:53PM
+echo Last tweak 6/20/2009 12:13PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -2794,11 +2794,11 @@ pause
 put stand
 	matchwait
 CLIMB8:
-	CLIMB8B You can't go there
-	CLIMB8A some stone stairs leading to the roadway below
+	match CLIMB8B You can't go there
+	match CLIMB8A some stone stairs leading to the roadway below
 put w
 	matchwait
-CLIMB8B
+CLIMB8B:
 move s
 goto CLIMB8_DONE
 
@@ -20985,7 +20985,7 @@ LABELERROR:
 	echo DEBUG_MODE:
 	echo
 	echo ***********************************************************
-	echo ** EZtrader: Last tweak 6/6/2009 12:53PM
+	echo ** EZtrader: Last tweak 6/20/2009 12:13PM
 	echo ** Variables:
 	echo **        1 = %1
 IF_2	echo **        2 = %2
