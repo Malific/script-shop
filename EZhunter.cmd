@@ -119109,7 +119109,7 @@ echo ** The Option you chose was a "Front Command"
 echo ** Front commands must come before any other scripting commands,
 echo ** but can be mixed in any order with other Front Commands.
 echo **
-echo ** LIST of FRONT commands: Loot, Skin, Attack, Evasion, Shield, Parry, Custom,
+echo ** LIST of FRONT commands: Loot, Skin, Attack, Evasion, Block, Parry, Custom,
 echo **                         Wear <item>, Remove <item>
 echo **
 echo **************************************************************************************

@@ -14894,7 +14894,7 @@ echo ** Front commands must come before any other scripting commands,
 echo ** but can be mixed in any order with other Front Commands.
 echo **
 echo ** LIST of FRONT commands: Appraise, Arrange, Exp, Loot, Retreat, Skin, Skindrop,
-echo **                         Skinexp, Slower, Attack, Evasion, Shield, Parry, Custom,
+echo **                         Skinexp, Slower, Attack, Evasion, Block, Parry, Custom,
 echo **                         Lootbox, Lootcoin, Lootgem, Wear <item>, Com1-Com5,
 echo **                         Count, SearchTreasure(ST), SearchBoxes(SB), SearchAll(SA),
 echo **                         SearchGoods(SG), SearchEquipment(SE)
