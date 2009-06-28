@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 5/29/2009 8:41PM
+echo Last tweak 6/27/2009 8:30PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -13084,8 +13084,8 @@ LOOT_CARNELIAN:
 	echo LOOT_CARNELIAN:
 	echo
 save carnelian
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13096,8 +13096,8 @@ LOOT_MORGANITE:
 	echo LOOT_MORGANITE:
 	echo
 save morganite
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13108,8 +13108,8 @@ LOOT_CHRYSOPRASE:
 	echo LOOT_CHRYSOPRASE:
 	echo
 save chrysoprase
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13120,8 +13120,8 @@ LOOT_AMBER:
 	echo LOOT_AMBER:
 	echo
 save amber
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13132,8 +13132,8 @@ LOOT_KUNZITE:
 	echo LOOT_KUNZITE:
 	echo
 save kunzite
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13144,8 +13144,8 @@ LOOT_IOLITE:
 	echo LOOT_IOLITE:
 	echo
 save iolite
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13156,8 +13156,8 @@ LOOT_CORAL:
 	echo LOOT_CORAL:
 	echo
 save coral
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13168,8 +13168,8 @@ LOOT_IVORY:
 	echo LOOT_IVORY:
 	echo
 save ivory
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13180,8 +13180,8 @@ LOOT_SPINEL:
 	echo LOOT_SPINEL:
 	echo
 save spinel
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13192,8 +13192,8 @@ LOOT_ONYX:
 	echo LOOT_ONYX:
 	echo
 save onyx
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13204,8 +13204,8 @@ LOOT_GARNET:
 	echo LOOT_GARNET:
 	echo
 save garnet
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 goto LOOT_STOW
@@ -13215,8 +13215,8 @@ LOOT_CHALCEDONY:
 	echo LOOT_CHALCEDONY:
 	echo
 save chalcedony
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13227,8 +13227,8 @@ LOOT_LAZULI:
 	echo LOOT_LAZULI:
 	echo
 save lazuli
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13239,8 +13239,8 @@ LOOT_STAR-STONE:
 	echo LOOT_STAR_STONE:
 	echo
 save star-stone
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13251,8 +13251,8 @@ LOOT_SUNSTONE:
 	echo LOOT_SUNSTONE:
 	echo
 save sunstone
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13263,8 +13263,8 @@ LOOT_MOONSTONE:
 	echo LOOT_MOONSTONE:
 	echo
 save moonstone
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13275,8 +13275,8 @@ LOOT_HEMATITE:
 	echo LOOT_HEMATITE:
 	echo
 save hematite
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13287,8 +13287,8 @@ LOOT_TANZANITE:
 	echo LOOT_TANZANITE:
 	echo
 save tanzanite
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13299,8 +13299,8 @@ LOOT_TURQUOISE:
 	echo LOOT_TURQUOISE:
 	echo
 save turquoise
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13311,8 +13311,8 @@ LOOT_PERIDOT:
 	echo LOOT_PERIDOT:
 	echo
 save peridot
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13323,8 +13323,8 @@ LOOT_BERYL:
 	echo LOOT_BERYL:
 	echo
 save beryl
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13335,8 +13335,8 @@ LOOT_ANDALUSITE:
 	echo LOOT_ANDALUSITE:
 	echo
 save andalusite
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13347,8 +13347,8 @@ LOOT_AGATE:
 	echo LOOT_AGATE:
 	echo
 save agate
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13359,8 +13359,8 @@ LOOT_JADE:
 	echo LOOT_JADE:
 	echo
 save jade
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13371,8 +13371,8 @@ LOOT_CITRINE:
 	echo LOOT_CITRINE:
 	echo
 save citrine
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13383,8 +13383,8 @@ LOOT_AQUAMARINE:
 	echo LOOT_AQUAMARINE:
 	echo
 save aquamarine
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13395,8 +13395,8 @@ LOOT_EMERALD:
 	echo LOOT_EMERALD:
 	echo
 save emerald
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13407,8 +13407,8 @@ LOOT_DIAMOND:
 	echo LOOT_DIAMOND:
 	echo
 save diamond
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13419,8 +13419,8 @@ LOOT_STRONGBOX:
 	echo LOOT_STRONGBOX:
 	echo
 save strongbox
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_BOX no matter
+	match LOOT_DROP_BOX any more room
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13430,8 +13430,8 @@ LOOT_COFFER:
 	echo LOOT_COFFER:
 	echo
 save coffer
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_BOX no matter
+	match LOOT_DROP_BOX any more room
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13441,8 +13441,8 @@ LOOT_CHEST:
 	echo LOOT_CHEST:
 	echo
 save chest
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_BOX no matter
+	match LOOT_DROP_BOX any more room
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13452,8 +13452,8 @@ LOOT_BOX:
 	echo LOOT_BOX:
 	echo
 save box
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_BOX no matter
+	match LOOT_DROP_BOX any more room
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13463,8 +13463,8 @@ LOOT_CADDY:
 	echo LOOT_CADDY:
 	echo
 save caddy
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_BOX no matter
+	match LOOT_DROP_BOX any more room
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13474,8 +13474,8 @@ LOOT_CASKET:
 	echo LOOT_CASKET:
 	echo
 save casket
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_BOX no matter
+	match LOOT_DROP_BOX any more room
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13485,8 +13485,8 @@ LOOT_TRUNK:
 	echo LOOT_TRUNK:
 	echo
 save trunk
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_BOX no matter
+	match LOOT_DROP_BOX any more room
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13496,8 +13496,8 @@ LOOT_SKIPPET:
 	echo LOOT_SKIPPET:
 	echo
 save skippet
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_BOX no matter
+	match LOOT_DROP_BOX any more room
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13507,8 +13507,8 @@ LOOT_CRATE:
 	echo LOOT_CRATE:
 	echo
 save crate
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_BOX no matter
+	match LOOT_DROP_BOX any more room
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13581,8 +13581,8 @@ LOOT_PEARL:
 	echo LOOT_PEARL:
 	echo
 save pearl
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13592,8 +13592,8 @@ LOOT_SAPPHIRE:
 	echo LOOT_SAPPHIRE:
 	echo
 save sapphire
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13603,8 +13603,8 @@ LOOT_OPAL:
 	echo LOOT_OPAL:
 	echo
 save opal
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13614,8 +13614,8 @@ LOOT_BLOODSTONE:
 	echo LOOT_BLOODSTONE:
 	echo
 save bloodstone
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13625,8 +13625,8 @@ LOOT_NUGGET:
 	echo LOOT_NUGGET:
 	echo
 save nugget
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13636,8 +13636,8 @@ LOOT_ZIRCON:
 	echo LOOT_ZIRCON:
 	echo
 save zircon
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13647,8 +13647,8 @@ LOOT_AMETHYST:
 	echo LOOT_AMETHYST:
 	echo
 save amethyst
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13658,8 +13658,8 @@ LOOT_QUARTZ:
 	echo LOOT_QUARTZ:
 	echo
 save quartz
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13669,8 +13669,8 @@ LOOT_JASPER:
 	echo LOOT_JASPER:
 	echo
 save jasper
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13680,8 +13680,8 @@ LOOT_STONE:
 	echo LOOT_STONE:
 	echo
 save stone
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13691,8 +13691,8 @@ LOOT_BLOODGEM:
 	echo LOOT_BLOODGEM:
 	echo
 save bloodgem
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13702,8 +13702,8 @@ LOOT_CRYSTAL:
 	echo LOOT_CRYSTAL:
 	echo
 save crystal
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13713,8 +13713,8 @@ LOOT_TOPAZ:
 	echo LOOT_TOPAZ:
 	echo
 save topaz
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13724,8 +13724,8 @@ LOOT_RUBY:
 	echo LOOT_RUBY:
 	echo
 save ruby
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13735,8 +13735,8 @@ LOOT_DIOPSIDE:
 	echo LOOT_DIOPSIDE:
 	echo
 save diopside
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13746,8 +13746,8 @@ LOOT_BAR:
 	echo LOOT_BAR:
 	echo
 save bar
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13757,8 +13757,8 @@ LOOT_GEM:
 	echo LOOT_GEM:
 	echo
 save gem
-	match LOOT_DROP no matter
-	match LOOT_DROP any more room
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13828,6 +13828,26 @@ LOOT_LOOK_NO:
 	echo
 IF_2 goto LOOT_EQUIP
 goto CHOKE_%zHtype
+
+
+
+LOOT_DROP_BOX:
+put drop my %s
+	echo
+	echo ********************************
+	echo ** Out of room to store BOXES!
+	echo ********************************
+	echo
+goto GEM_%zHlootgem
+
+LOOT_DROP_GEM:
+put drop my %s
+	echo
+	echo ********************************
+	echo ** Out of room to store GEMS!
+	echo ********************************
+	echo
+goto LOOTING
 
 LOOT_DROP:
 	echo
@@ -15199,7 +15219,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 5/29/2009 8:41PM
+	echo ** SFhunter Version 2: Last tweak 6/27/2009 8:30PM
 	echo **
 	echo **************************************************************************************
 	echo
