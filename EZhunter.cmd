@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 6/20/2009 11:59AM
+echo Last tweak 7/11/2009 8:32PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -147,7 +147,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 6/20/2009 11:59AM
+	echo ** EZhunter DR2v1: Last tweak 7/11/2009 8:32PM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -20539,7 +20539,7 @@ echo
 	match BOBCAT1 bobcat which appears dead
 	match ARBELOG1 arbelog which appears dead
 	match RAT1 rat which appears dead
-	match SPIDER1 wolf spider which appears dead
+	match SPIDER1 spider which appears dead
 	match BOOBRIE1 boobrie which appears dead
 	match MOTH1 moth which appears dead
 	match LARVA1 larva which appears dead
@@ -20637,7 +20637,7 @@ echo
 	match MODA4 moda which appears dead
 	match HATCHLING4 hatchling which appears dead
 	match ANGISWAERD4 marbled angiswaerd which appears dead
-	match SPIDER4 sand spider which appears dead
+	match SPIDER4 spider which appears dead
 	match NOMAD4 zombie nomad which appears dead
 	match CRAB4 salt crab which appears dead
 	match SPRITE4 sand sprite which appears dead
@@ -20686,7 +20686,7 @@ echo
 	match GERMISH'DIN5 germish'din which appears dead
 	match KARTAIS5 kartais which appears dead
 	match LA'TAMI5 yvhh la'tami which appears dead
-	match SPIDER5 blade spider which appears dead
+	match SPIDER5 spider which appears dead
 	match MALCHATA5 malchata which appears dead
 	match FANATIC5 priest fanatic which appears dead
 	match MAGE5 adan'f shadow mage which appears dead
@@ -25505,7 +25505,7 @@ echo
 	match BOBCAT bobcat which appears dead
 	match ARBELOG arbelog which appears dead
 	match RAT rat which appears dead
-	match SPIDER wolf spider which appears dead
+	match SPIDER spider which appears dead
 	match BOOBRIE boobrie which appears dead
 	match LARVA larva which appears dead
 	match MOTH moth which appears dead
@@ -35289,7 +35289,7 @@ MONSTER_GROUP_4:
 	match MODA moda which appears dead
 	match HATCHLING hatchling which appears dead
 	match ANGISWAERD marbled angiswaerd which appears dead
-	match SPIDER sand spider which appears dead
+	match SPIDER spider which appears dead
 	match NOMAD zombie nomad which appears dead
 	match CRAB salt crab which appears dead
 	match SPRITE sand sprite which appears dead
@@ -38567,7 +38567,7 @@ MONSTER_GROUP_5:
 	match GERMISH'DIN germish'din which appears dead
 	match KARTAIS kartais which appears dead
 	match LA'TAMI yvhh la'tami which appears dead
-	match SPIDER blade spider which appears dead
+	match SPIDER spider which appears dead
 	match MALCHATA malchata which appears dead
 	match FANATIC priest fanatic which appears dead
 	match MAGE adan'f shadow mage which appears dead
