@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 7/11/2009 8:32PM
+echo Last tweak 7/12/2009 6:26PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -4214,9 +4214,12 @@ put stow %zHammo
 	waitfor you
 goto RANGE_UNLOAD
 
+RANGE_UNLOAD_SWAP:
+put swap
 RANGE_UNLOAD_PAUSE:
 pause
 RANGE_UNLOAD:
+	match RANGE_UNLOAD_SWAP You don't have a ranged weapon to unload
 	match RANGE_UNLOAD_STOW roundtime
 	match RANGE_UNLOAD_PAUSE ...wait
 	match RANGE_UNLOAD_PAUSE type ahead
@@ -6873,7 +6876,8 @@ THROWN_EXP_OFF:
 	echo
 	echo THROWN_THROW:
 	echo
-	matchre THROWN_GET /roundtime|What do you want to throw\?/i
+	match THROWN_GET What do you want to throw
+	match THORWN_THROW2 roundtime
 	matchre T_DEAD /balanced\]|balance\]|already dead|very dead/i
 	matchre FATIGUE_T /\[You're beat,|\[You're exhausted|\[You're bone-tired/i
 	match THROWN_DUD suitable throwing
@@ -6888,7 +6892,7 @@ THROWN_GET:
 	echo
 	echo THROWN_GET:
 	echo
-	matchre THROWN_THROW2 /already|pick that up|you get|you pick up/i
+	matchre THROWN_EXP_OFF /already|pick that up|you get|you pick up/i
 	match THROWN_SECONDARY What were you
 	matchre THROWN_GET_PAUSE /\.\.\.wait|type ahead/i
 put get %1
@@ -6900,7 +6904,8 @@ THROWN_THROW2:
 	echo
 	echo THROWN_THROW2:
 	echo
-	matchre THROWN_GET2 /roundtime|What do you want to throw\?/i
+	match THROWN_GET2 What do you want to throw
+	match THORWN_RETREAT roundtime
 	matchre T_DEAD /balanced\]|balance\]|already dead|very dead/i
 	matchre FATIGUE_T /\[You're beat,|\[You're exhausted|\[You're bone-tired/i
 	match THROWN_DUD suitable throwing
@@ -6916,7 +6921,7 @@ THROWN_GET2:
 	echo THROWN_GET2:
 	echo
 	match THROWN_SECONDARY What were you
-	matchre THROWN_RETREAT /already|pick that up|you get|you pick up/i
+	matchre THROWN_THROW2 /already|pick that up|you get|you pick up/i
 	matchre THROWN_GET2_PAUSE /\.\.\.wait|type ahead/i
 put get %1
 	matchwait
@@ -9914,7 +9919,7 @@ setvariable zHmonster MONSTER5B
 put look
 	matchwait
 
-# 32/32
+# 33/32
 MONSTER6:
 MONSTER_GROUP_6:
 echo
@@ -9950,6 +9955,7 @@ setvariable zHmonster MONSTER6B
 	matchre IMP /imp (which appears dead|\(dead\))/i
 	matchre BUCCA /bucca (which appears dead|\(dead\))/i
 #temporary
+	matchre OAF /oaf (which appears dead|\(dead\))/i
 	matchre PRYDAEN /prydaen (which appears dead|\(dead\))/i
 	matchre RAKASH /rakash (which appears dead|\(dead\))/i
 	matchre MUTT /mutt (which appears dead|\(dead\))/i
@@ -10187,6 +10193,7 @@ echo
 	matchre LARVA /larva (which appears dead|\(dead\))/i
 	matchre CRAG /crag (which appears dead|\(dead\))/i
 	matchre TENDRIL /tendril (which appears dead|\(dead\))/i
+	matchre OAF /oaf (which appears dead|\(dead\))/i
 	matchre BEAST /beast (which appears dead|\(dead\))/i
 	matchre BASILISK /basilisk (which appears dead|\(dead\))/i
 	matchre MERROW /merrow (which appears dead|\(dead\))/i
@@ -10228,6 +10235,13 @@ setvariable zHmonster MONSTER1
 	echo ************************************
 	echo
 	goto NO_LOOT
+
+OAF:
+echo
+echo OAF:
+echo
+	setvariable zHkill oaf
+	goto SEARCH
 
 PRYDAEN:
 echo
@@ -11701,10 +11715,13 @@ put swap
 put sheath left
 	matchwait
 
+SKIN_UNLOAD_SWAP
+put swap
 SKIN_UNLOAD_PAUSE:
 pause
 SKIN_UNLOAD:
 put sheath
+	match SKIN_UNLOAD_SWAP You don't have a ranged weapon to unload
 	match SKIN_UNLOAD_STOW roundtime
 	match SKIN_UNLOAD_PAUSE ...wait
 	match SKIN_UNLOAD_PAUSE type ahead
@@ -15203,7 +15220,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 7/11/2009 8:32PM
+	echo ** SFhunter Version 2: Last tweak 7/12/2009 6:26PM
 	echo **
 	echo **************************************************************************************
 	echo

@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 7/11/2009 8:32PM
+echo Last tweak 7/12/2009 6:58PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -147,7 +147,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 7/11/2009 8:32PM
+	echo ** EZhunter DR2v1: Last tweak 7/12/2009 6:58PM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -20730,8 +20730,6 @@ echo
 	match LOUT6 lout which appears dead
 	match CONSCRIPT6 conscript which appears dead
 	match TRESS6 tress which appears dead
-# Larva is in 1 grouped with tendril and crag
-	match LARVA6 larva which appears dead
 	match TENDRIL6 tendril which appears dead
 	match CRAG6 crag which appears dead
 	match BASILISK6 basilisk which appears dead
@@ -20740,6 +20738,7 @@ echo
 	match IMP6 imp which appears dead
 	match BUCCA6 bucca which appears dead
 #Temporary
+	match OAF6 oaf which appears dead
 	match MUTT6 mutt which appears dead
 	match PEON6 peon which appears dead
 	match RAKASH6 rakash which appears dead
@@ -22028,6 +22027,14 @@ echo
 	save merrow
 	goto S_%c
 
+OAF6:
+echo
+echo OAF6:
+echo
+	counter add 600000
+	save oaf
+	goto SEARCH
+
 PRYDAEN6:
 echo
 echo PRYDAEN6:
@@ -22210,14 +22217,6 @@ echo TRESS6:
 echo
 	counter add 600000
 	save tress
-	goto S_%c
-	
-LARVA6:
-echo
-echo LARVA6:
-echo
-	counter add 600000
-	save larva
 	goto S_%c
 	
 TENDRIL6:
@@ -41841,7 +41840,7 @@ MONSTER_GROUP_6:
 	match LOUT lout which appears dead
 	match CONSCRIPT conscript which appears dead
 	match TRESS tress which appears dead
-	match LARVA larva which appears dead
+	match OAF oaf which appears dead
 	match TENDRIL tendril which appears dead
 	match CRAG crag which appears dead
 	match BASILISK basilisk which apepars dead
@@ -46309,6 +46308,13 @@ echo MERROW:
 echo
 	save merrow
 	goto S_%c
+
+OAF:
+echo
+echo OAF:
+echo
+	save oaf
+	goto SEARCH
 
 PRYDAEN:
 echo
