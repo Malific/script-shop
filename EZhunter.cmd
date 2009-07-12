@@ -5906,7 +5906,7 @@ THROWN_THROW:
 	echo
 	echo THROWN_THROW:
 	echo
-	match THROWN_GET roundtime
+	match THROWN_THROW2 roundtime
 	match THROWN_GET What do you want to throw?
 	match T_DEAD balanced]
 	match T_DEAD balance]
@@ -5928,11 +5928,11 @@ THROWN_GET:
 	echo
 	echo THROWN_GET:
 	echo
-	match THROWN_THROW2 already
-	match THROWN_THROW2 pick that up
+	match THROWN_THROW already
+	match THROWN_THROW pick that up
 	match THROWN_SECONDARY What were you
-	match THROWN_THROW2 you get
-	match THROWN_THROW2 you pick up
+	match THROWN_THROW you get
+	match THROWN_THROW you pick up
 	match THROWN_GET_PAUSE ...wait
 	match THROWN_GET_PAUSE type ahead
 put get %1
@@ -5966,11 +5966,11 @@ THROWN_GET2:
 	echo
 	echo THROWN_GET2:
 	echo
-	match THROWN_THROW3 already
+	match THROWN_THROW2 already
 	match THROWN_THROW2 pick that up
 	match THROWN_SECONDARY What were you
-	match THROWN_RETREAT you get
-	match THROWN_RETREAT you pick up
+	match THROWN_THROW2 you get
+	match THROWN_THROW2 you pick up
 	match THROWN_GET2_PAUSE ...wait
 	match THROWN_GET2_PAUSE type ahead
 put get %1
@@ -5981,7 +5981,7 @@ THROWN_THROW3:
 	echo
 	echo THROWN_THROW3:
 	echo
-	match THROWN_GET3 roundtime
+	match THROWN_RETREAT roundtime
 	match THROWN_GET3 What do you want to throw?
 	match T_DEAD balanced]
 	match T_DEAD balance]
@@ -6003,11 +6003,11 @@ THROWN_GET3:
 	echo
 	echo THROWN_GET3:
 	echo
-	match THROWN_RETREAT already
-	match THROWN_RETREAT pick that up
+	match THROWN_THROW3 already
+	match THROWN_THROW3 pick that up
 	match THROWN_SECONDARY What were you
-	match THROWN_RETREAT you get
-	match THROWN_RETREAT you pick up
+	match THROWN_THROW3 you get
+	match THROWN_THROW3 you pick up
 	match THROWN_GET3_PAUSE ...wait
 	match THROWN_GET3_PAUSE type ahead
 put get %1
