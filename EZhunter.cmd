@@ -5637,9 +5637,12 @@ put stow arrow
 
 goto RANGE_UNLOAD
 
+RANGE_UNLOAD_SWAP:
+put swap
 RANGE_UNLOAD_PAUSE:
 pause
 RANGE_UNLOAD:
+	match RANGE_UNLOAD_SWAP You don't have a ranged weapon to unload
 	match RANGE_UNLOAD_STOW roundtime
 	match RANGE_UNLOAD_PAUSE ...wait
 	match RANGE_UNLOAD_PAUSE type ahead
@@ -72247,10 +72250,15 @@ put swap
 put sheath left
 	matchwait
 
+
+
+SKIN_UNLOAD_SWAP
+put swap
 SKIN_UNLOAD_PAUSE:
 pause
 SKIN_UNLOAD:
 put sheath
+	match SKIN_UNLOAD_SWAP You don't have a ranged weapon to unload
 	match SKIN_UNLOAD_STOW roundtime
 	match SKIN_UNLOAD_PAUSE ...wait
 	match SKIN_UNLOAD_PAUSE type ahead
