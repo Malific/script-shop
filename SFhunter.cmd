@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 6/27/2009 8:30PM
+echo Last tweak 7/11/2009 8:32PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -3915,6 +3915,7 @@ RANGE_LOAD:
 	echo RANGE_LOAD:
 	echo
 	matchre RANGE_GET /You must|your hand jams|readily available|You can not load/i
+	match NOT_RANGE can't load
 	matchre RANGE_1_LOAD_PAUSE /\.\.\.wait|type ahead/i
 	match RANGE_RETREAT3_PAUSE roundtime
 	match RANGE_RETREAT3 is already
@@ -3924,6 +3925,10 @@ RANGE_LOAD:
 	match RANGE_LID lid on your arm.
 put load
 	matchwait
+
+NOT_RANGE:
+counter subtract 100
+goto WEAPON_CHECK
 
 REPEAT_LOAD_PAUSE:
 pause
@@ -9837,7 +9842,7 @@ setvariable zHmonster MONSTER4B
 	matchre MODA /moda (which appears dead|\(dead\))/i
 	matchre HATCHLING /hatchling (which appears dead|\(dead\))/i
 	matchre ANGISWAERD /marbled angiswaerd (which appears dead|\(dead\))/i
-	matchre SPIDER /sand spider (which appears dead|\(dead\))/i
+	matchre SPIDER /spider (which appears dead|\(dead\))/i
 	matchre NOMAD /zombie nomad (which appears dead|\(dead\))/i
 	matchre CRAB /salt crab (which appears dead|\(dead\))/i
 	matchre SPRITE /sand sprite (which appears dead|\(dead\))/i
@@ -9888,7 +9893,7 @@ setvariable zHmonster MONSTER5B
 	matchre GERMISH'DIN /germish'din (which appears dead|\(dead\))/i
 	matchre KARTAIS /kartais (which appears dead|\(dead\))/i
 	matchre LA'TAMI /yvhh la'tami (which appears dead|\(dead\))/i
-	matchre SPIDER /blade spider (which appears dead|\(dead\))/i
+	matchre SPIDER /spider (which appears dead|\(dead\))/i
 	matchre MALCHATA /malchata (which appears dead|\(dead\))/i
 	matchre FANATIC /priest fanatic (which appears dead|\(dead\))/i
 	matchre MAGE /adan'f shadow mage (which appears dead|\(dead\))/i
@@ -9945,7 +9950,6 @@ setvariable zHmonster MONSTER6B
 	matchre IMP /imp (which appears dead|\(dead\))/i
 	matchre BUCCA /bucca (which appears dead|\(dead\))/i
 #temporary
-
 	matchre PRYDAEN /prydaen (which appears dead|\(dead\))/i
 	matchre RAKASH /rakash (which appears dead|\(dead\))/i
 	matchre MUTT /mutt (which appears dead|\(dead\))/i
@@ -9987,7 +9991,7 @@ echo
 	matchre BOBCAT /bobcat (which appears dead|\(dead\))/i
 	matchre ARBELOG /arbelog (which appears dead|\(dead\))/i
 	matchre RAT /rat (which appears dead|\(dead\))/i
-	matchre SPIDER /wolf spider (which appears dead|\(dead\))/i
+	matchre SPIDER /spider (which appears dead|\(dead\))/i
 	matchre BOOBRIE /boobrie (which appears dead|\(dead\))/i
 	matchre MOTH /moth (which appears dead|\(dead\))/i
 	matchre LARVA /larva (which appears dead|\(dead\))/i
@@ -10086,7 +10090,7 @@ echo
 	matchre MODA /moda (which appears dead|\(dead\))/i
 	matchre HATCHLING /hatchling (which appears dead|\(dead\))/i
 	matchre ANGISWAERD /marbled angiswaerd (which appears dead|\(dead\))/i
-	matchre SPIDER /sand spider (which appears dead|\(dead\))/i
+	matchre SPIDER /spider (which appears dead|\(dead\))/i
 	matchre NOMAD /zombie nomad (which appears dead|\(dead\))/i
 	matchre CRAB /salt crab (which appears dead|\(dead\))/i
 	matchre SPRITE /sand sprite (which appears dead|\(dead\))/i
@@ -10135,7 +10139,7 @@ echo
 	matchre GERMISH'DIN /germish'din (which appears dead|\(dead\))/i
 	matchre KARTAIS /kartais (which appears dead|\(dead\))/i
 	matchre LA'TAMI /yvhh la'tami (which appears dead|\(dead\))/i
-	matchre SPIDER /blade spider (which appears dead|\(dead\))/i
+	matchre SPIDER /spider (which appears dead|\(dead\))/i
 	matchre MALCHATA /malchata (which appears dead|\(dead\))/i
 	matchre FANATIC /priest fanatic (which appears dead|\(dead\))/i
 	matchre MAGE /adan'f shadow mage (which appears dead|\(dead\))/i
@@ -13929,12 +13933,12 @@ echo ******************************************
 echo
 
 ## XP Mind State by Chris Evans
-XP_CHECK1:
-	matchre XPSLEEP /(: Thick|: Very Thick|: Dense|: Very Dense|: Stagnant|: Very Stagnant|: Frozen|: Very Frozen)/i
-	matchre XP%zHxpsleep /(: Murky|: Very Murky)/i
-	matchre XPAWAKE /(: clear|: fluid)/i
+#XP_CHECK1:
+#	matchre XPSLEEP /(: Thick|: Very Thick|: Dense|: Very Dense|: Stagnant|: Very Stagnant|: Frozen|: Very Frozen)/i
+#	matchre XP%zHxpsleep /(: Murky|: Very Murky)/i
+#	matchre XPAWAKE /(: clear|: fluid)/i
 put skill
-	matchwait
+#	matchwait
 
 XP_CHECK2:
 pause 1
@@ -13966,18 +13970,13 @@ MULTIB_OFF:
 	echo
 	echo MULTIB_OFF:
 	echo
-	match MULTI_EXP_%zHexpC % clear
-	match MULTI_EXP_%zHexpC % learning
-	match MULTI_EXP_%zHexpC % thoughtful
-	match MULTI_EXP_%zHexpC % pondering
-	match MULTI_EXP_%zHexpC % concentrating
-	match MULTI_EXP_%zHexpC % muddled
-	match MULTI_EXP_%zHexpC % very muddled
-	match MULTI_EXP_%zHexpC % perplex
+	match MULTI_EXP_%zHexpC /34
 	match MULTI_EXP_%zHexpC Deaths:
-	match MULTI_SWITCH % bewild
-	match MULTI_SWITCH % dazed
-	match MULTI_SWITCH % mind
+	match MULTI_SWITCH % 30/34
+	match MULTI_SWITCH % 31/34
+	match MULTI_SWITCH % 32/34
+	match MULTI_SWITCH % 33/34
+	match MULTI_SWITCH % 34/34
 put skill %zHexp
 	matchwait
 	
@@ -13986,18 +13985,13 @@ MULTIB_ON:
 	echo
 	echo MULTIB_ON:
 	echo
-	match MULTI_EXP_%zHexpC % clear
-	match MULTI_EXP_%zHexpC % learning
-	match MULTI_EXP_%zHexpC % thoughtful
-	match MULTI_EXP_%zHexpC % pondering
-	match MULTI_EXP_%zHexpC % concentrating
-	match MULTI_EXP_%zHexpC % muddled
-	match MULTI_EXP_%zHexpC % very muddled
-	match MULTI_EXP_%zHexpC % perplex
+	match MULTI_EXP_%zHexpC % /34
 	match MULTI_EXP_%zHexpC Deaths:
-	match MULTI_SWITCH % bewild
-	match MULTI_SWITCH % dazed
-	match MULTI_SWITCH % mind
+	match MULTI_SWITCH % 30/34
+	match MULTI_SWITCH % 31/34
+	match MULTI_SWITCH % 32/34
+	match MULTI_SWITCH % 33/34
+	match MULTI_SWITCH % 34/34
 put skill %zHexpA
 	matchwait
 	
@@ -14005,18 +13999,13 @@ MULTIB_THROW:
 	echo
 	echo MULTIB_THROW:
 	echo
-	match MULTIB_THROW2 % clear
-	match MULTIB_THROW2 % learning
-	match MULTIB_THROW2 % thoughtful
-	match MULTIB_THROW2 % pondering
-	match MULTIB_THROW2 % concentrating
-	match MULTIB_THROW2 % muddled
-	match MULTIB_THROW2 % very muddled
-	match MULTIB_THROW2 % perplex
+	match MULTIB_THROW2 % /34
 	match MULTIB_THROW2 Deaths:
-	match MULTI_SWITCH % bewild
-	match MULTI_SWITCH % dazed
-	match MULTI_SWITCH % mind
+	match MULTI_SWITCH % 30/34
+	match MULTI_SWITCH % 31/34
+	match MULTI_SWITCH % 32/34
+	match MULTI_SWITCH % 33/34
+	match MULTI_SWITCH % 34/34
 put skill Light Thrown
 	matchwait
 
@@ -14024,18 +14013,13 @@ MULTIB_THROW2:
 	echo
 	echo MULTIB_THROW2:
 	echo
-	match MULTI_EXP_%zHexpC % clear
-	match MULTI_EXP_%zHexpC % learning
-	match MULTI_EXP_%zHexpC % thoughtful
-	match MULTI_EXP_%zHexpC % pondering
-	match MULTI_EXP_%zHexpC % concentrating
-	match MULTI_EXP_%zHexpC % muddled
-	match MULTI_EXP_%zHexpC % very muddled
-	match MULTI_EXP_%zHexpC % perplex
+	match MULTI_EXP_%zHexpC % /34
 	match MULTI_EXP_%zHexpC Deaths:
-	match MULTI_SWITCH % bewild
-	match MULTI_SWITCH % dazed
-	match MULTI_SWITCH % mind
+	match MULTI_SWITCH % 30/34
+	match MULTI_SWITCH % 31/34
+	match MULTI_SWITCH % 32/34
+	match MULTI_SWITCH % 33/34
+	match MULTI_SWITCH % 34/34
 put skill Heavy Thrown
 	matchwait
 
@@ -14043,18 +14027,13 @@ MULTIB_OFFHAND:
 	echo
 	echo MULTIB_OFFHAND:
 	echo
-	match MULTI_EXP_%zHexpC % clear
-	match MULTI_EXP_%zHexpC % learning
-	match MULTI_EXP_%zHexpC % thoughtful
-	match MULTI_EXP_%zHexpC % pondering
-	match MULTI_EXP_%zHexpC % concentrating
-	match MULTI_EXP_%zHexpC % muddled
-	match MULTI_EXP_%zHexpC % very muddled
-	match MULTI_EXP_%zHexpC % perplex
+	match MULTI_EXP_%zHexpC % /34
 	match MULTI_EXP_%zHexpC Deaths:
-	match MULTI_SWITCH % bewild
-	match MULTI_SWITCH % dazed
-	match MULTI_SWITCH % mind
+	match MULTI_SWITCH % 30/34
+	match MULTI_SWITCH % 31/34
+	match MULTI_SWITCH % 32/34
+	match MULTI_SWITCH % 33/34
+	match MULTI_SWITCH % 34/34
 put skill %zHexpB
 	matchwait
 
@@ -14185,7 +14164,6 @@ MULTI_SWITCH_Short.Staff:
 MULTI_SWITCH_Quarter.Staff:
 MULTI_SWITCH_Pike:
 MULTI_SWITCH_Halberd:
-MULTI_SWITCH_THROW:
 MULTI_SWITCH_ON:
 counter set %zHmultiZ
 counter add 1
@@ -14275,6 +14253,7 @@ wait
 goto MULTI_GO
 
 MULTI_SWITCH_OFFHAND:
+MULTI_SWITCH_THROW:
 counter set %zHmultiZ
 counter add 1
 setvariable zHmultiZ %c
@@ -14302,7 +14281,6 @@ OFF_UNEQUIP_STOW2A:
 	echo
 put stow %2
 wait
-
 OFF_UNEQUIP_STOW_PAUSE:
 pause
 OFF_UNEQUIP_STOW:
@@ -14313,7 +14291,7 @@ OFF_UNEQUIP_STOW:
 	match OFF_UNEQUIP_STOWA sheathe what?
 	match OFF_UNEQUIP_STOWA where?
 	match OFF_UNEQUIP_STOWA isn't any more
-	matchre MULTI_GO /You Sheath|you slide|you place|you slip|you hang|you secure/i
+	matchre OFF_UNEQUIP_STOWB /You Sheath|you slide|you place|you slip|you hang|you secure/i
 	match OFF_UNEQUIP_STOWA you can only
 	match OFF_UNEQUIP_STOWA too heavy
 	match OFF_UNEQUIP_STOW_PAUSE ...wait
@@ -14327,7 +14305,7 @@ OFF_UNEQUIP_STOWA:
 	echo
 	match OFF_UNEQUIP_STOW_DROP unload
 	match OFF_UNEQUIP_STOWB can't wear
-	matchre MULTI_GO /you (sling|attach)|re already|wear what|what were you/i
+	matchre OFF_UNEQUIP_STOWB /you (sling|attach)|re already|wear what|what were you/i
 put wear %1
 	matchwait
 
@@ -14336,15 +14314,20 @@ OFF_UNEQUIP_STOW_DROP:
 	echo OFF_UNEQUIP_STOW_DROP:
 	echo
 put drop my %1
-goto MULTI_GO
+got MULTI_GO
 
+OFF_UNEQUIP_STOWB_PAUSE:
+pause
 OFF_UNEQUIP_STOWB:
 	echo
 	echo OFF_UNEQUIP_STOWB:
 	echo
-put stow left %1
-wait
-goto MULTI_GO
+	matchre OFF_UNEQUIP_STOWB /you put|you pull|you pick up/i
+	matchre MULTI_GO /already|what were you|what are you|stow what/i
+	matchre OFF_UNEQUIP_STOWB_PAUSE /\.\.\.wait|type ahead/i
+put stow %1
+put stow %1
+	matchwait
 
 MULTI_GO:
 #goto MULTI_BRA_%zHexpA
@@ -14503,7 +14486,8 @@ COUNT_PLUS:
 	match CLEAR_CRITTERS hundred
 	match CLEAR_CRITTERS thousand
 	match COUNT_5_1 You notice no 
-	match CRITTER_COUNTS roundtime
+#	match CRITTER_COUNTS roundtime
+	match COUNT_5_1 roundtime
 put count critter
 	matchwait
 
@@ -14636,7 +14620,7 @@ echo ** It is possible to have the script Dance with a certain number of critter
 echo ** killing them. The Script will do 'Emapthic Brawling' until MORE THAN the number
 echo ** of critters you designate is in the room. (NOT at melee. NOT on you. IN THE ROOM.)
 echo **
-echo ** In line with Simu's new 'inactivity' system dacnign will make one kill before
+echo ** In line with Simu's new 'inactivity' system dancing will make one kill before
 echo ** five minute 'timer' that will trigger critters to leave the room.
 echo **
 echo ** .SFhunter Count #
@@ -14777,7 +14761,7 @@ echo
 echo **************************************************************************************
 echo **     To set up multi weapon simply put in SET as the first variable followed by the
 echo ** SFhunter set-ups you want to cycle through, each set-up must be inside a set of
-echo ** quotes ("). Multi-weapon will change set-ups when you reach Bewildering in the
+echo ** quotes ("). Multi-weapon will change set-ups when you reach 30/34 in the
 echo ** current weapon.
 echo **    Syntax:  .SFhunter SET "Set-up1" "Set-up2" Set-up3" ... "Set-up20"
 echo ** NOTE: You don't have to use all 20 available set-up spots.
@@ -15219,7 +15203,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 6/27/2009 8:30PM
+	echo ** SFhunter Version 2: Last tweak 7/11/2009 8:32PM
 	echo **
 	echo **************************************************************************************
 	echo
