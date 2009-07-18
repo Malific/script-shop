@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 7/12/2009 6:26PM
+echo Last tweak 7/18/2009 12:11PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -6876,8 +6876,8 @@ THROWN_EXP_OFF:
 	echo
 	echo THROWN_THROW:
 	echo
-	match THROWN_GET What do you want to throw
-	match THORWN_THROW2 roundtime
+	match THROWN_GET to throw?
+	match THROWN_THROW2 roundtime
 	matchre T_DEAD /balanced\]|balance\]|already dead|very dead/i
 	matchre FATIGUE_T /\[You're beat,|\[You're exhausted|\[You're bone-tired/i
 	match THROWN_DUD suitable throwing
@@ -6904,8 +6904,8 @@ THROWN_THROW2:
 	echo
 	echo THROWN_THROW2:
 	echo
-	match THROWN_GET2 What do you want to throw
-	match THORWN_RETREAT roundtime
+	match THROWN_GET2 to throw?
+	match THROWN_RETREAT roundtime
 	matchre T_DEAD /balanced\]|balance\]|already dead|very dead/i
 	matchre FATIGUE_T /\[You're beat,|\[You're exhausted|\[You're bone-tired/i
 	match THROWN_DUD suitable throwing
@@ -7229,7 +7229,7 @@ OFF_THROWN_EXP_OFF:
 	echo
 	echo OFF_THROWN_THROW:
 	echo
-	matchre OFF_THROWN_GET /roundtime|What do you want to throw\?/i
+	matchre OFF_THROWN_GET /roundtime|to throw?\?/i
 	matchre OFF_T_DEAD /balanced\]|balance\]|already dead|very dead/i
 	matchre OFF_FATIGUE_T /\[You're beat,|\[You're exhausted|\[You're bone-tired/i
 	match OFF_THROWN_DUD suitable throwing
@@ -7256,7 +7256,7 @@ OFF_THROWN_THROW2:
 	echo
 	echo OFF_THROWN_THROW2:
 	echo
-	matchre OFF_THROWN_GET2 /roundtime|What do you want to throw\?/i
+	matchre OFF_THROWN_GET2 /roundtime|to throw?\?/i
 	matchre OFF_T_DEAD /balanced\]|balance\]|already dead|very dead/i
 	matchre OFF_FATIGUE_T /\[You're beat,|\[You're exhausted|\[You're bone-tired/i
 	match OFF_THROWN_DUD suitable throwing
@@ -11715,7 +11715,7 @@ put swap
 put sheath left
 	matchwait
 
-SKIN_UNLOAD_SWAP
+SKIN_UNLOAD_SWAP:
 put swap
 SKIN_UNLOAD_PAUSE:
 pause
@@ -12706,7 +12706,7 @@ goto SEARCH_GEM_%zHlootgem
 SEARCH_GEM_0:
 	matchre LOOT_GEMS / carnelian,| carnelian\.| carnelian and | chrysoprase,| chrysoprase\.| chrysoprase and | amber,| amber\.| amber and | kunzite,| kunzite\.| kunzite and | iolite,| iolite\.| iolite and | coral,| coral\.| coral and | ivory,| ivory\.| ivory and | spinel,| spinel\.| spinel and | onyx,| onyx\.| onyx and | garnet,| garnet\.| garnet and | chalcedony,| chalcedony\.| chalcedony and | lazuli,| lazuli\.| lazuli and | star-stone,| star-stone\.| star-stone and | sunstone,| sunstone\.| sunstone and | moonstone,| moonstone\.| moonstone and | hematite,| hematite\.| hematite and | tanzanite,| tanzanite\.| tanzanite and | turquoise,| turquoise\.| turquoise and | peridot,| peridot\.| peridot and | beryl,| beryl\.| beryl and | andalusite,| andalusite\.| andalusite and | agate,| agate\.| agate and | jade,| jade\.| jade and | citrine,| citrine\.| citrine and | aquamarine,| aquamarine\.| aquamarine and /i
 #added Above gems - TY Storrmm Wyndrydor
-	matchre LOOT_GEMS / pearl,| pearl\.| pearl and | sapphire,| sapphire\.| sapphire and | opal,| opal\.| opal and | bloodstone,| bloodstone\.| bloodstone and | nugget,| nugget\.| nugget and | zircon,| zircon\.| zircon and | amethyst,| amethyst\.| amethyst and | quartz,| quartz\.| quartz and | jasper,| jasper\.| jasper and | bloodgem,| bloodgem\.| bloodgem and | crystal,| crystal\.| crystal and | topaz,| topaz\.| topaz and | ruby,| ruby\.| ruby and | diopside,| diopside\.| diopside and | gem,| gem\.| gem and | emerald,| emerald\.| emerald and | diamond,| diamond\.| diamond and | stone,| stone\.| stone and | stones,| stones\.| stones and /i
+	matchre LOOT_GEMS / pearl,| pearl\.| pearl and | sapphire,| sapphire\.| sapphire and | opal,| opal\.| opal and | bloodstone,| bloodstone\.| bloodstone and | nugget,| nugget\.| nugget and | zircon,| zircon\.| zircon and | amethyst,| amethyst\.| amethyst and | quartz,| quartz\.| quartz and | jasper,| jasper\.| jasper and | bloodgem,| bloodgem\.| bloodgem and | crystal,| crystal\.| crystal and | topaz,| topaz\.| topaz and | ruby,| ruby\.| ruby and | diopside,| diopside\.| diopside and | gem,| gem\.| gem and | emerald,| emerald\.| emerald and | diamond,| diamond\.| diamond and | stone,| stone\.| stone and | stones,| stones\.| stones and | dira,| dira\.| dira and /i
 SEARCH_GEM_1:
 goto SEARCH_COIN_%zHlootcoin
 
@@ -13001,6 +13001,7 @@ LOOT_GEMS:
 	match LOOT_CITRINE citrine.
 	match LOOT_AQUAMARINE aquamarine.
 #added Above gems - TY Storrmm Wyndrydor.
+	match LOOT_DIRA dira.
 	match LOOT_MORGANITE morganite.
 	match LOOT_PEARL pearl.
 	match LOOT_SAPPHIRE sapphire.
@@ -13099,6 +13100,18 @@ COIN_1:
 put look
 put encum
 	matchwait
+
+LOOT_DIRA:
+	echo
+	echo LOOT_DIRA:
+	echo
+save dira
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
+	match LOOT_GEMS_COUNT You put
+	match LOOTING Stow what?
+	matchwait
+goto LOOT_STOW
 
 LOOT_CARNELIAN:
 	echo
@@ -13989,11 +14002,7 @@ MULTIB_OFF:
 	echo
 	match MULTI_EXP_%zHexpC /34
 	match MULTI_EXP_%zHexpC Deaths:
-	match MULTI_SWITCH % 30/34
-	match MULTI_SWITCH % 31/34
-	match MULTI_SWITCH % 32/34
-	match MULTI_SWITCH % 33/34
-	match MULTI_SWITCH % 34/34
+	matchre MULTI_SWITCH /% (30|31|32|33|34)\/34/i
 put skill %zHexp
 	matchwait
 	
@@ -14004,11 +14013,7 @@ MULTIB_ON:
 	echo
 	match MULTI_EXP_%zHexpC % /34
 	match MULTI_EXP_%zHexpC Deaths:
-	match MULTI_SWITCH % 30/34
-	match MULTI_SWITCH % 31/34
-	match MULTI_SWITCH % 32/34
-	match MULTI_SWITCH % 33/34
-	match MULTI_SWITCH % 34/34
+	matchre MULTI_SWITCH /% (30|31|32|33|34)\/34/i
 put skill %zHexpA
 	matchwait
 	
@@ -14018,11 +14023,7 @@ MULTIB_THROW:
 	echo
 	match MULTIB_THROW2 % /34
 	match MULTIB_THROW2 Deaths:
-	match MULTI_SWITCH % 30/34
-	match MULTI_SWITCH % 31/34
-	match MULTI_SWITCH % 32/34
-	match MULTI_SWITCH % 33/34
-	match MULTI_SWITCH % 34/34
+	matchre MULTI_SWITCH /% (30|31|32|33|34)\/34/i
 put skill Light Thrown
 	matchwait
 
@@ -14032,11 +14033,7 @@ MULTIB_THROW2:
 	echo
 	match MULTI_EXP_%zHexpC % /34
 	match MULTI_EXP_%zHexpC Deaths:
-	match MULTI_SWITCH % 30/34
-	match MULTI_SWITCH % 31/34
-	match MULTI_SWITCH % 32/34
-	match MULTI_SWITCH % 33/34
-	match MULTI_SWITCH % 34/34
+	matchre MULTI_SWITCH /% (30|31|32|33|34)\/34/i
 put skill Heavy Thrown
 	matchwait
 
@@ -14046,11 +14043,7 @@ MULTIB_OFFHAND:
 	echo
 	match MULTI_EXP_%zHexpC % /34
 	match MULTI_EXP_%zHexpC Deaths:
-	match MULTI_SWITCH % 30/34
-	match MULTI_SWITCH % 31/34
-	match MULTI_SWITCH % 32/34
-	match MULTI_SWITCH % 33/34
-	match MULTI_SWITCH % 34/34
+	matchre MULTI_SWITCH /% (30|31|32|33|34)\/34/i
 put skill %zHexpB
 	matchwait
 
@@ -15220,7 +15213,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 7/12/2009 6:26PM
+	echo ** SFhunter Version 2: Last tweak 7/18/2009 12:11PM
 	echo **
 	echo **************************************************************************************
 	echo

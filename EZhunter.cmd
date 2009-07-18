@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 7/12/2009 6:58PM
+echo Last tweak 7/18/2009 12:11PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -147,7 +147,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 7/12/2009 6:58PM
+	echo ** EZhunter DR2v1: Last tweak 7/18/2009 12:11PM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -5910,7 +5910,7 @@ THROWN_THROW:
 	echo THROWN_THROW:
 	echo
 	match THROWN_THROW2 roundtime
-	match THROWN_GET What do you want to throw?
+	match THROWN_GET to throw?
 	match T_DEAD balanced]
 	match T_DEAD balance]
 	match T_DEAD already dead
@@ -5948,7 +5948,7 @@ THROWN_THROW2:
 	echo THROWN_THROW2:
 	echo
 	match THROWN_GET2 roundtime
-	match THROWN_GET2 What do you want to throw?
+	match THROWN_GET2 to throw?
 	match T_DEAD balanced]
 	match T_DEAD balance]
 	match T_DEAD already dead
@@ -5985,7 +5985,7 @@ THROWN_THROW3:
 	echo THROWN_THROW3:
 	echo
 	match THROWN_RETREAT roundtime
-	match THROWN_GET3 What do you want to throw?
+	match THROWN_GET3 to throw?
 	match T_DEAD balanced]
 	match T_DEAD balance]
 	match T_DEAD already dead
@@ -72252,7 +72252,7 @@ put sheath left
 
 
 
-SKIN_UNLOAD_SWAP
+SKIN_UNLOAD_SWAP:
 put swap
 SKIN_UNLOAD_PAUSE:
 pause
@@ -118576,6 +118576,7 @@ LOOT_DROP_GEMS2:
 	match DROP_BAR bar in
 	match DROP_MORGANITE morganite in
 	match DROP_CARNELIAN carnelian in
+	match DROP_DIRA dira in
 	match NO_LOOT your left hand
 	match NO_LOOT empty hands
 	match LOOT_DROP_GEMS2_PAUSE ...wait
@@ -118735,6 +118736,13 @@ save crate
 #	match LOOT_LOOK_NO stow what
 #put stow crate
 	matchwait
+
+DROP_DIRA:
+	echo
+	echo DROP_DIRA:
+	echo
+save dira
+goto LOOT_DROP
 
 DROP_CARNELIAN:
 	echo
