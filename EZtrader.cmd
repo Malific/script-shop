@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZtrader
-echo Last tweak 6/20/2009 12:13PM
+echo Last tweak 7/18/2009 2:24PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -2832,8 +2832,19 @@ pause
 put stand
 	matchwait
 CLIMB10:
-move se
+	match CLIMB10B You can't go there
+	match CLIMB10A in The Crossing's western wall.
+put se
+	matchwait
+
+CLIMB10B:
+move n
+move go stairs
+goto CLIMB10C
+
+CLIMB10A:
 move go gate
+CLIMB10C:
 put tell caravan follow
 wait
 WEST_GATE_CLIMB_DONE:
@@ -20985,7 +20996,7 @@ LABELERROR:
 	echo DEBUG_MODE:
 	echo
 	echo ***********************************************************
-	echo ** EZtrader: Last tweak 6/20/2009 12:13PM
+	echo ** EZtrader: Last tweak 7/18/2009 2:24PM
 	echo ** Variables:
 	echo **        1 = %1
 IF_2	echo **        2 = %2

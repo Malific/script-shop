@@ -3105,6 +3105,7 @@ pause
 	match QUIT [You're
 put stand
 	matchwait
+
 CLIMB9:
 move nw
 CLIMB9B:
@@ -3119,9 +3120,21 @@ pause
 	match QUIT [You're
 put stand
 	matchwait
+
 CLIMB10:
-move se
+	match CLIMB10B You can't go there
+	match CLIMB10A in The Crossing's western wall.
+put se
+	matchwait
+
+CLIMB10B:
+move n
+move go stairs
+goto CLIMB10C
+
+CLIMB10A:
 move go gate
+CLIMB10C:
 put tell caravan follow
 wait
 WEST_GATE_CLIMB_DONE:
