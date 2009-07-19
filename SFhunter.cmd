@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 7/18/2009 12:11PM
+echo Last tweak 7/19/2009 7:14PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -10880,7 +10880,7 @@ echo SPRITE:
 echo
 	setvariable zHkill sprite
 
-	goto SKIN_VARI_CHECK
+	goto SEARCH
 
 LIPOPOD:
 echo
@@ -14000,9 +14000,8 @@ MULTIB_OFF:
 	echo
 	echo MULTIB_OFF:
 	echo
-	match MULTI_EXP_%zHexpC /34
 	match MULTI_EXP_%zHexpC Deaths:
-	matchre MULTI_SWITCH /% (30|31|32|33|34)\/34/i
+	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
 put skill %zHexp
 	matchwait
 	
@@ -14011,9 +14010,8 @@ MULTIB_ON:
 	echo
 	echo MULTIB_ON:
 	echo
-	match MULTI_EXP_%zHexpC % /34
 	match MULTI_EXP_%zHexpC Deaths:
-	matchre MULTI_SWITCH /% (30|31|32|33|34)\/34/i
+	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
 put skill %zHexpA
 	matchwait
 	
@@ -14021,9 +14019,8 @@ MULTIB_THROW:
 	echo
 	echo MULTIB_THROW:
 	echo
-	match MULTIB_THROW2 % /34
 	match MULTIB_THROW2 Deaths:
-	matchre MULTI_SWITCH /% (30|31|32|33|34)\/34/i
+	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
 put skill Light Thrown
 	matchwait
 
@@ -14031,9 +14028,8 @@ MULTIB_THROW2:
 	echo
 	echo MULTIB_THROW2:
 	echo
-	match MULTI_EXP_%zHexpC % /34
 	match MULTI_EXP_%zHexpC Deaths:
-	matchre MULTI_SWITCH /% (30|31|32|33|34)\/34/i
+	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
 put skill Heavy Thrown
 	matchwait
 
@@ -14041,9 +14037,8 @@ MULTIB_OFFHAND:
 	echo
 	echo MULTIB_OFFHAND:
 	echo
-	match MULTI_EXP_%zHexpC % /34
 	match MULTI_EXP_%zHexpC Deaths:
-	matchre MULTI_SWITCH /% (30|31|32|33|34)\/34/i
+	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
 put skill %zHexpB
 	matchwait
 
@@ -15213,7 +15208,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 7/18/2009 12:11PM
+	echo ** SFhunter Version 2: Last tweak 7/19/2009 7:14PM
 	echo **
 	echo **************************************************************************************
 	echo

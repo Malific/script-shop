@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 7/18/2009 12:11PM
+echo Last tweak 7/19/2009 7:14PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -147,7 +147,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 7/18/2009 12:11PM
+	echo ** EZhunter DR2v1: Last tweak 7/19/2009 7:14PM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -21346,7 +21346,7 @@ echo SPRITE3:
 echo
 	save sprite
 	counter add 300000
-	goto S_%c
+	goto SEARCH
 
 LIPOPOD3:
 echo
@@ -21555,7 +21555,7 @@ echo SPRITE4:
 echo
 	save sprite
 	counter add 400000
-	goto S_%c
+	goto SEARCH
 
 LA'HEKE4:
 echo
@@ -38564,7 +38564,7 @@ MONSTER_GROUP_5:
 	match SOUL tortured soul which appears dead
 	match HAFWA snaer hafwa which appears dead
 	match FIEND crypt fiend which appears dead
-	match SPRITE_2 fire sprite which appears dead
+	match SPRITE fire sprite which appears dead
 	match MEY moss mey which appears dead
 	match GERMISH'DIN germish'din which appears dead
 	match KARTAIS kartais which appears dead
@@ -45601,13 +45601,6 @@ echo
 
 	goto SEARCH
 
-SPRITE:
-echo
-echo SPRITE:
-echo
-	save sprite
-
-	goto S_%c
 
 LIPOPOD:
 echo
