@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 7/19/2009 7:14PM
+echo Last tweak 7/19/2009 9:35PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -9735,7 +9735,7 @@ setvariable zHmonster MONSTER1B
 	matchre CREEPER /creeper (which appears dead|\(dead\))/i
 	matchre VINES /morah vine (which appears dead|\(dead\))/i
 	matchre MARAUDER /gypsy marauder (which appears dead|\(dead\))/i
-	matchre OGRE /ogre (which appears dead|\(dead\))/i
+	matchre DUSK_OGRE /dusk ogre (which appears dead|\(dead\))/i
 	matchre BEAR /black bear (which appears dead|\(dead\))/i
 	matchre WOLF /blood wolf (which appears dead|\(dead\))/i
 	matchre BOBCAT /bobcat (which appears dead|\(dead\))/i
@@ -9931,7 +9931,7 @@ setvariable zHmonster MONSTER6B
 	matchre NYAD /deadwood nyad (which appears dead|\(dead\))/i
 	matchre DRYAD /deadwood dryad (which appears dead|\(dead\))/i
 	matchre GARGOYLE /marble gargoyle (which appears dead|\(dead\))/i
-	matchre OGRE /blight ogre (which appears dead|\(dead\))/i
+	matchre OGRE /ogre (which appears dead|\(dead\))/i
 	matchre BAT /blight bat (which appears dead|\(dead\))/i
 	matchre TOMMYKNOCKER /tommyknocker (which appears dead|\(dead\))/i
 	matchre SLIME /slime (which appears dead|\(dead\))/i
@@ -9991,7 +9991,7 @@ echo
 	matchre CREEPER /creeper (which appears dead|\(dead\))/i
 	matchre VINES /morah vine (which appears dead|\(dead\))/i
 	matchre MARAUDER /gypsy marauder (which appears dead|\(dead\))/i
-	matchre OGRE /ogre (which appears dead|\(dead\))/i
+	matchre DUSK_OGRE /dusk ogre (which appears dead|\(dead\))/i
 	matchre BEAR /black bear (which appears dead|\(dead\))/i
 	matchre WOLF /blood wolf (which appears dead|\(dead\))/i
 	matchre BOBCAT /bobcat (which appears dead|\(dead\))/i
@@ -10175,7 +10175,7 @@ echo
 	matchre NYAD /deadwood nyad (which appears dead|\(dead\))/i
 	matchre DRYAD /deadwood dryad (which appears dead|\(dead\))/i
 	matchre GARGOYLE /marble gargoyle (which appears dead|\(dead\))/i
-	matchre OGRE /blight ogre (which appears dead|\(dead\))/i
+	matchre OGRE /ogre (which appears dead|\(dead\))/i
 	matchre BAT /blight bat (which appears dead|\(dead\))/i
 	matchre TOMMYKNOCKER /tommyknocker (which appears dead|\(dead\))/i
 	matchre SLIME /slime (which appears dead|\(dead\))/i
@@ -10533,7 +10533,17 @@ echo
 
 
 	setvariable zHkill ogre
+	goto SKIN_VARI_CHECK
+
+DUSK_OGRE:
+echo
+echo DUSK_OGRE:
+echo
+
+
+	setvariable zHkill ogre
 	goto SEARCH
+
 
 BEAR:
 echo
@@ -15208,7 +15218,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 7/19/2009 7:14PM
+	echo ** SFhunter Version 2: Last tweak 7/19/2009 9:35PM
 	echo **
 	echo **************************************************************************************
 	echo
