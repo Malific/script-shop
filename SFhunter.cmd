@@ -1235,15 +1235,15 @@ setvariable zHtype BRAWL
 	echo
 B_A:
 IF_1 goto B_B
-setvariable zHcombo1 dodge
-setvariable zHcombo2 gouge
-setvariable zHcombo3 claw
-setvariable zHcombo4 elbow
+setvariable zHcombo1 parry
+setvariable zHcombo2 jab
+setvariable zHcombo3 kick
+setvariable zHcombo4 slice
 setvariable zHcombo5 punch
-setvariable zHcombo6 slam
-setvariable zHcombo7 unused
+setvariable zHcombo6 claw
+setvariable zHcombo7 elbow
 setvariable zHcombo8 unused
-counter add 600
+counter add 700
 goto BRAWL_EQUIPMENT
 
 B_B:
