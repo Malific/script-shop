@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 7/19/2009 9:35PM
+echo Last tweak 8/11/2009 1:37AM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -3851,7 +3851,7 @@ REPEAT_ON:
 	echo
 	match REP_EXP_L light crossbow
 	match REP_EXP_H heavy crossbow
-put app %1
+put app %1 quick
 	matchwait
 
 REP_EXP_L:
@@ -7691,7 +7691,7 @@ EMPATH_APPRAISE:
 	match EMP_BRAWL_PAUSE weapon.
 	match EMPATH_SWAP hinderance
 	match EMP_BRAWL_PAUSE roundtime
-put appraise my %1
+put appraise my %1 quick
 	matchwait
 
 EMPATH_APPRAISEL:
@@ -7701,7 +7701,7 @@ EMPATH_APPRAISEL:
 	match EMPATH_SWAP weapon.
 	match EMP_BRAWL_PAUSE hinderance
 	match EMP_BRAWL_PAUSE roundtime
-put appraise my %1
+put appraise my %1 quick
 	matchwait
 
 EMPATH_SWAP:
@@ -7839,7 +7839,7 @@ BRAWL_APPRAISE:
 	match BRA_BRAWL_PAUSE weapon.
 	match BRAWL_SWAP2 hinderance
 	match BRA_BRAWL_PAUSE roundtime
-put appraise my %1
+put appraise my %1 quick
 	matchwait
 
 BRAWL_APPRAISEL:
@@ -7850,7 +7850,7 @@ setvariable zHbrawltype SHIELD
 	match BRAWL_SWAP1 weapon.
 	match BRA_BRAWL_PAUSE hinderance
 	match BRA_BRAWL_PAUSE roundtime
-put appraise my %1
+put appraise my %1 quick
 	matchwait
 
 BRAWL_SWAP1:
@@ -7888,7 +7888,7 @@ AMBUSH_HIDE_OFF:
 	echo AMBUSH_HIDE_OFF:
 	echo
 	match AMBUSH_HIDE fail
-	matchre AMBUSH_RETREAT1 /You are too close|notices|discovers/i
+	matchre AMBUSH_RETREAT1_PAUSE /You are too close|notices|discovers/i
 	matchre AMBUSH_ADV /You melt|You blend|Eh\?/i
 	matchre AMBUSH_HIDE_PAUSE /\.\.\.wait|type ahead/i
 	match AMBUSH_HIDE_PAUSE type ahead
@@ -12985,6 +12985,7 @@ goto LOOT_GEMS
 LOOT_GEMS_PAUSE:
 pause
 LOOT_GEMS:
+	match LOOT_MALACHITE malachite
 	match LOOT_CARNELIAN carnelian.
 	match LOOT_CHRYSOPRASE chrysoprase.
 	match LOOT_AMBER amber.
@@ -13029,10 +13030,8 @@ LOOT_GEMS:
 	match LOOT_DIOPSIDE diopside.
 	match LOOT_EMERALD emerald.
 	match LOOT_DIAMOND diamond.
-	match LOOT_STONE stone.
-	match LOOT_STONE stones.
-	match LOOT_GEM gem.
-	match LOOT_GEM gems.
+	matchre LOOT_STONE (stone\.|stones\.)
+	matchre LOOT_GEM (gem\.|gems\.)
 	match LOOT_BAR bar.
 	match LOOTING Stow what?
 	match LOOT_GEMS_PAUSE ...wait
@@ -13111,6 +13110,19 @@ put look
 put encum
 	matchwait
 
+LOOT_MALACHITE:
+	echo
+	echo LOOT_MALACHITE:
+	echo
+save malachite
+	match LOOT_DROP_GEM no matter
+	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
+	match LOOT_GEMS_COUNT You put
+	match LOOTING Stow what?
+	matchwait
+goto LOOT_STOW
+
 LOOT_DIRA:
 	echo
 	echo LOOT_DIRA:
@@ -13118,6 +13130,7 @@ LOOT_DIRA:
 save dira
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13130,6 +13143,7 @@ LOOT_CARNELIAN:
 save carnelian
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13142,6 +13156,7 @@ LOOT_MORGANITE:
 save morganite
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13154,6 +13169,7 @@ LOOT_CHRYSOPRASE:
 save chrysoprase
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13166,6 +13182,7 @@ LOOT_AMBER:
 save amber
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13178,6 +13195,7 @@ LOOT_KUNZITE:
 save kunzite
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13190,6 +13208,7 @@ LOOT_IOLITE:
 save iolite
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13202,6 +13221,7 @@ LOOT_CORAL:
 save coral
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13214,6 +13234,7 @@ LOOT_IVORY:
 save ivory
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13226,6 +13247,7 @@ LOOT_SPINEL:
 save spinel
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13238,6 +13260,7 @@ LOOT_ONYX:
 save onyx
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13250,6 +13273,7 @@ LOOT_GARNET:
 save garnet
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 goto LOOT_STOW
@@ -13261,6 +13285,7 @@ LOOT_CHALCEDONY:
 save chalcedony
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13273,6 +13298,7 @@ LOOT_LAZULI:
 save lazuli
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13285,6 +13311,7 @@ LOOT_STAR-STONE:
 save star-stone
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13297,6 +13324,7 @@ LOOT_SUNSTONE:
 save sunstone
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13309,6 +13337,7 @@ LOOT_MOONSTONE:
 save moonstone
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13321,6 +13350,7 @@ LOOT_HEMATITE:
 save hematite
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13333,6 +13363,7 @@ LOOT_TANZANITE:
 save tanzanite
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13345,6 +13376,7 @@ LOOT_TURQUOISE:
 save turquoise
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13357,6 +13389,7 @@ LOOT_PERIDOT:
 save peridot
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13369,6 +13402,7 @@ LOOT_BERYL:
 save beryl
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13381,6 +13415,7 @@ LOOT_ANDALUSITE:
 save andalusite
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13393,6 +13428,7 @@ LOOT_AGATE:
 save agate
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13405,6 +13441,7 @@ LOOT_JADE:
 save jade
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13417,6 +13454,7 @@ LOOT_CITRINE:
 save citrine
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13429,6 +13467,7 @@ LOOT_AQUAMARINE:
 save aquamarine
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13441,6 +13480,7 @@ LOOT_EMERALD:
 save emerald
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13453,6 +13493,7 @@ LOOT_DIAMOND:
 save diamond
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	match LOOTING Stow what?
 	matchwait
@@ -13465,6 +13506,7 @@ LOOT_STRONGBOX:
 save strongbox
 	match LOOT_DROP_BOX no matter
 	match LOOT_DROP_BOX any more room
+	match LOOT_DROP_BOX can't fit
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13476,6 +13518,7 @@ LOOT_COFFER:
 save coffer
 	match LOOT_DROP_BOX no matter
 	match LOOT_DROP_BOX any more room
+	match LOOT_DROP_BOX can't fit
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13487,6 +13530,7 @@ LOOT_CHEST:
 save chest
 	match LOOT_DROP_BOX no matter
 	match LOOT_DROP_BOX any more room
+	match LOOT_DROP_BOX can't fit
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13498,6 +13542,7 @@ LOOT_BOX:
 save box
 	match LOOT_DROP_BOX no matter
 	match LOOT_DROP_BOX any more room
+	match LOOT_DROP_BOX can't fit
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13509,6 +13554,7 @@ LOOT_CADDY:
 save caddy
 	match LOOT_DROP_BOX no matter
 	match LOOT_DROP_BOX any more room
+	match LOOT_DROP_BOX can't fit
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13520,6 +13566,7 @@ LOOT_CASKET:
 save casket
 	match LOOT_DROP_BOX no matter
 	match LOOT_DROP_BOX any more room
+	match LOOT_DROP_BOX can't fit
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13531,6 +13578,7 @@ LOOT_TRUNK:
 save trunk
 	match LOOT_DROP_BOX no matter
 	match LOOT_DROP_BOX any more room
+	match LOOT_DROP_BOX can't fit
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13542,6 +13590,7 @@ LOOT_SKIPPET:
 save skippet
 	match LOOT_DROP_BOX no matter
 	match LOOT_DROP_BOX any more room
+	match LOOT_DROP_BOX can't fit
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13553,6 +13602,7 @@ LOOT_CRATE:
 save crate
 	match LOOT_DROP_BOX no matter
 	match LOOT_DROP_BOX any more room
+	match LOOT_DROP_BOX can't fit
 	match LOOT_BOXES_COUNT You put
 	match GEM_%zHlootgem Stow what?
 	matchwait
@@ -13627,6 +13677,7 @@ LOOT_PEARL:
 save pearl
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13638,6 +13689,7 @@ LOOT_SAPPHIRE:
 save sapphire
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13649,6 +13701,7 @@ LOOT_OPAL:
 save opal
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13660,6 +13713,7 @@ LOOT_BLOODSTONE:
 save bloodstone
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13671,6 +13725,7 @@ LOOT_NUGGET:
 save nugget
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13682,6 +13737,7 @@ LOOT_ZIRCON:
 save zircon
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13693,6 +13749,7 @@ LOOT_AMETHYST:
 save amethyst
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13704,6 +13761,7 @@ LOOT_QUARTZ:
 save quartz
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13715,6 +13773,7 @@ LOOT_JASPER:
 save jasper
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13726,6 +13785,7 @@ LOOT_STONE:
 save stone
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13737,6 +13797,7 @@ LOOT_BLOODGEM:
 save bloodgem
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13748,6 +13809,7 @@ LOOT_CRYSTAL:
 save crystal
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13759,6 +13821,7 @@ LOOT_TOPAZ:
 save topaz
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13770,6 +13833,7 @@ LOOT_RUBY:
 save ruby
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13781,6 +13845,7 @@ LOOT_DIOPSIDE:
 save diopside
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13792,6 +13857,7 @@ LOOT_BAR:
 save bar
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13803,6 +13869,7 @@ LOOT_GEM:
 save gem
 	match LOOT_DROP_GEM no matter
 	match LOOT_DROP_GEM any more room
+	match LOOT_DROP_GEM can't fit
 	match LOOT_GEMS_COUNT You put
 	matchwait
 goto LOOT_STOW
@@ -13856,6 +13923,7 @@ LOOT_COIN:
 	match LOOT_COIN_PAUSE ...wait
 	match LOOT_COIN_PAUSE type ahead
 	match LOOT_COIN You pick up
+	match LOOT_COIN You search
 	match LOOTING_PAUSE I could not find
 put loot coin
 	matchwait
@@ -14010,8 +14078,8 @@ MULTIB_OFF:
 	echo
 	echo MULTIB_OFF:
 	echo
-	match MULTI_EXP_%zHexpC Deaths:
 	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
+	match MULTI_EXP_%zHexpC Deaths:
 put skill %zHexp
 	matchwait
 	
@@ -14020,8 +14088,8 @@ MULTIB_ON:
 	echo
 	echo MULTIB_ON:
 	echo
-	match MULTI_EXP_%zHexpC Deaths:
 	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
+	match MULTI_EXP_%zHexpC Deaths:
 put skill %zHexpA
 	matchwait
 	
@@ -14029,8 +14097,8 @@ MULTIB_THROW:
 	echo
 	echo MULTIB_THROW:
 	echo
-	match MULTIB_THROW2 Deaths:
 	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
+	match MULTIB_THROW2 Deaths:
 put skill Light Thrown
 	matchwait
 
@@ -14038,8 +14106,8 @@ MULTIB_THROW2:
 	echo
 	echo MULTIB_THROW2:
 	echo
-	match MULTI_EXP_%zHexpC Deaths:
 	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
+	match MULTI_EXP_%zHexpC Deaths:
 put skill Heavy Thrown
 	matchwait
 
@@ -14047,8 +14115,8 @@ MULTIB_OFFHAND:
 	echo
 	echo MULTIB_OFFHAND:
 	echo
-	match MULTI_EXP_%zHexpC Deaths:
 	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
+	match MULTI_EXP_%zHexpC Deaths:
 put skill %zHexpB
 	matchwait
 
@@ -14375,6 +14443,7 @@ YES_APP:
 	match NO_APP appraise
 	match NO_APP You can't determine
 	match NO_APP You cannot appraise
+	match NO_APP You ponder that
 put app %zHkill quick
 	matchwait
 
@@ -15218,7 +15287,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 7/19/2009 9:35PM
+	echo ** SFhunter Version 2: Last tweak 8/11/2009 1:37AM
 	echo **
 	echo **************************************************************************************
 	echo

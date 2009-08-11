@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 7/19/2009 9:35PM
+echo Last tweak 8/11/2009 1:37AM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -147,7 +147,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 7/19/2009 9:35PM
+	echo ** EZhunter DR2v1: Last tweak 8/11/2009 1:37AM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -118455,6 +118455,7 @@ pause
 	match LOOT_BOXES_PAUSE you put
 	match LOOT_DROP_BOXES no matter
 	match LOOT_DROP_BOXES any more room
+	match LOOT_DROP_BOXES can't fit
 	match LOOT_GEMS_PAUSE Stow what?
 	match LOOT_BOXES_PAUSE ...wait
 	match LOOT_BOXES_PAUSE type ahead
@@ -118502,6 +118503,7 @@ LOOT_GEMS:
 	match LOOT_GEMS_PAUSE you put
 	match LOOT_DROP_GEMS no matter
 	match LOOT_DROP_GEMS any more room
+	match LOOT_DROP_GEMS can't fit
 	match NO_LOOT Stow what?
 	match LOOT_GEMS_PAUSE ...wait
 	match LOOT_GEMS_PAUSE type ahead
@@ -118610,6 +118612,7 @@ LOOT_STRONGBOX:
 save strongbox
 	match LOOT_DROP_BOXES no matter
 	match LOOT_DROP_BOXES any more room
+	match LOOT_DROP_BOXES can't fit
 #	match LOOTING_PAUSE
 	match LOOT_BOXES_PAUSE You put
 	match LOOT_GEMS_PAUSE Stow what?
@@ -118624,6 +118627,7 @@ LOOT_COFFER:
 save coffer
 	match LOOT_DROP_BOXES no matter
 	match LOOT_DROP_BOXES any more room
+	match LOOT_DROP_BOXES can't fit
 #	match LOOTING_PAUSE
 	match LOOT_BOXES_PAUSE You put
 	match LOOT_GEMS_PAUSE Stow what?
@@ -118638,6 +118642,7 @@ LOOT_CHEST:
 save chest
 	match LOOT_DROP_BOXES no matter
 	match LOOT_DROP_BOXES any more room
+	match LOOT_DROP_BOXES can't fit
 #	match LOOTING_PAUSE
 	match LOOT_BOXES_PAUSE You put
 	match LOOT_GEMS_PAUSE Stow what?
@@ -118652,6 +118657,7 @@ LOOT_BOX:
 save box
 	match LOOT_DROP_BOXES no matter
 	match LOOT_DROP_BOXES any more room
+	match LOOT_DROP_BOXES can't fit
 #	match LOOTING_PAUSE
 	match LOOT_BOXES_PAUSE You put
 	match LOOT_GEMS_PAUSE Stow what?
@@ -118666,6 +118672,7 @@ LOOT_CADDY:
 save caddy
 	match LOOT_DROP_BOXES no matter
 	match LOOT_DROP_BOXES any more room
+	match LOOT_DROP_BOXES can't fit
 #	match LOOTING_PAUSE
 	match LOOT_BOXES_PAUSE You put
 	match LOOT_GEMS_PAUSE Stow what?
@@ -118680,6 +118687,7 @@ LOOT_CASKET:
 save casket
 	match LOOT_DROP_BOXES no matter
 	match LOOT_DROP_BOXES any more room
+	match LOOT_DROP_BOXES can't fit
 #	match LOOTING_PAUSE
 	match LOOT_BOXES_PAUSE You put
 	match LOOT_GEMS_PAUSE Stow what?
@@ -118694,6 +118702,7 @@ LOOT_TRUNK:
 save trunk
 	match LOOT_DROP_BOXES no matter
 	match LOOT_DROP_BOXES any more room
+	match LOOT_DROP_BOXES can't fit
 #	match LOOTING_PAUSE
 	match LOOT_BOXES_PAUSE You put
 	match LOOT_GEMS_PAUSE Stow what?
@@ -118708,6 +118717,7 @@ LOOT_SKIPPET:
 save skippet
 	match LOOT_DROP_BOXES no matter
 	match LOOT_DROP_BOXES any more room
+	match LOOT_DROP_BOXES can't fit
 #	match LOOTING_PAUSE
 	match LOOT_BOXES_PAUSE You put
 	match LOOT_GEMS_PAUSE Stow what?
@@ -118722,6 +118732,7 @@ LOOT_CRATE:
 save crate
 	match LOOT_DROP_BOXES no matter
 	match LOOT_DROP_BOXES any more room
+	match LOOT_DROP_BOXES can't fit
 #	match LOOTING_PAUSE
 	match LOOT_BOXES_PAUSE You put
 	match LOOT_GEMS_PAUSE Stow what?
