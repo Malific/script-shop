@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 8/11/2009 1:37AM
+echo Last tweak 8/12/2009 3:52PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -13030,8 +13030,8 @@ LOOT_GEMS:
 	match LOOT_DIOPSIDE diopside.
 	match LOOT_EMERALD emerald.
 	match LOOT_DIAMOND diamond.
-	matchre LOOT_STONE (stone\.|stones\.)
-	matchre LOOT_GEM (gem\.|gems\.)
+	matchre LOOT_STONE /(stone\.|stones\.)/i
+	matchre LOOT_GEM /(gem\.|gems\.)/i
 	match LOOT_BAR bar.
 	match LOOTING Stow what?
 	match LOOT_GEMS_PAUSE ...wait
@@ -15287,7 +15287,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 8/11/2009 1:37AM
+	echo ** SFhunter Version 2: Last tweak 8/12/2009 3:52PM
 	echo **
 	echo **************************************************************************************
 	echo
