@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo SFtrader
-echo Last tweak 6/20/2009 12:13PM
+echo Last tweak 8/22/2009 1:55PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -5614,6 +5614,7 @@ LETH_BLOW:
 	match LETH_BLOW_PAUSE ...wait
 	match LETH_BLOW_PAUSE type ahead
 	match LETH_TRASH Smoking commands
+	match LETH_TRASH you blow gently
 put exhale my %zTorigami
 	matchwait
 
@@ -12068,6 +12069,7 @@ BLOW:
 	match BLOW_PAUSE type ahead
 	match HIDE referring
 	match BLOW_TRASH Smoking commands
+	match BLOW_TRASH you blow gently
 put exhale my %zTorigami
 	matchwait
 
@@ -13415,6 +13417,7 @@ GON_BLOW:
 	match GON_BLOW_PAUSE ...wait
 	match GON_BLOW_PAUSE type ahead
 	match GON_TRASH Smoking commands
+	match GON_TRASH you blow gently
 put exhale my %zTorigami
 	matchwait
 
@@ -14170,6 +14173,7 @@ T_BLOW:
 	match T_BLOW_PAUSE ...wait
 	match T_BLOW_PAUSE type ahead
 	match T_TRASH Smoking commands
+	match T_TRASH you blow gently
 put exhale my %zTorigami
 	matchwait
 
@@ -15731,6 +15735,7 @@ P_BLOW:
 	match P_BLOW_PAUSE ...wait
 	match P_BLOW_PAUSE type ahead
 	match P_TRASH Smoking commands
+	match P_TRASH you blow gently
 put exhale my %zTorigami
 	matchwait
 
@@ -22217,7 +22222,7 @@ LABELERROR:
 	echo
 	echo ** Copy/Paste DEBUG_MODE and the game window from the last oupost you left.
 	echo ***********************************************************
-	echo ** SFtrader: Last tweak 6/20/2009 12:13PM
+	echo ** SFtrader: Last tweak 8/22/2009 1:55PM
 	echo ** Variables:
 	echo **        1 = %1
 IF_2	echo **        2 = %2

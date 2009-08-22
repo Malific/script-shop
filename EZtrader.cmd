@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZtrader
-echo Last tweak 7/18/2009 2:24PM
+echo Last tweak 8/22/2009 1:55PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -5086,6 +5086,7 @@ LETH_BLOW:
 	match LETH_DROP Smoking
 	match LETH_BLOW_PAUSE ...wait
 	match LETH_BLOW_PAUSE type ahead
+	match LETH_DROP you blow gently
 put exhale my %zTorigami
 	matchwait
 
@@ -11462,6 +11463,7 @@ BLOW:
 	match BLOW_DROP Smoking
 	match BLOW_PAUSE ...wait
 	match BLOW_PAUSE type ahead
+	match BLOW_DROP you blow gently
 put exhale my %zTorigami
 	matchwait
 
@@ -12645,6 +12647,7 @@ GON_BLOW:
 	match GON_BLOW_DROP Smoking
 	match GON_BLOW_PAUSE ...wait
 	match GON_BLOW_PAUSE type ahead
+	match GON_BLOW_DROP you blow gently
 put exhale my %zTorigami
 	matchwait
 
@@ -13224,6 +13227,7 @@ T_BLOW:
 	match T_BLOW_DROP smoking
 	match T_BLOW_PAUSE ...wait
 	match T_BLOW_PAUSE type ahead
+	match T_BLOW_DROP you blow gently
 put exhale my %zTorigami
 	matchwait
 
@@ -14887,6 +14891,7 @@ P_BLOW:
 	match P_BLOW_HIDE smoking
 	match P_BLOW_PAUSE ...wait
 	match P_BLOW_PAUSE type ahead
+	match P_BLOW_HIDE you blow gently
 put exhale my %zTorigami
 	matchwait
 
@@ -20996,7 +21001,7 @@ LABELERROR:
 	echo DEBUG_MODE:
 	echo
 	echo ***********************************************************
-	echo ** EZtrader: Last tweak 7/18/2009 2:24PM
+	echo ** EZtrader: Last tweak 8/22/2009 1:55PM
 	echo ** Variables:
 	echo **        1 = %1
 IF_2	echo **        2 = %2

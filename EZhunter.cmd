@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo EZhunter
-echo Last tweak 8/11/2009 1:37AM
+echo Last tweak 8/22/2009 1:29PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -147,7 +147,7 @@ DEBUG_MODE:
 	echo ***********************************************************
 	echo **
 	echo ** Copy/Paste DEBUG_MODE and LAST 3 Commands of game text
-	echo ** EZhunter DR2v1: Last tweak 8/11/2009 1:37AM
+	echo ** EZhunter DR2v1: Last tweak 8/22/2009 1:29PM
 	echo ** Variables:
 	echo **       1 = %1
 IF_2	echo **       2 = %2
@@ -20536,7 +20536,7 @@ echo
 	match CREEPER1 creeper which appears dead
 	match VINE1 morah vine which appears dead
 	match MARAUDER1 gypsy marauder which appears dead
-	match OGRE1 dusk ogre which appears dead
+	match OGRE1 ogre which appears dead
 	match BEAR1 black bear which appears dead
 	match WOLF1 blood wolf which appears dead
 	match BOBCAT1 bobcat which appears dead
@@ -20719,7 +20719,6 @@ echo
 	match NYAD6 nyad which appears dead
 	match DRYAD6 dryad which appears dead
 	match GARGOYLE6  marble gargoyle which appears dead
-	match OGRE6 ogre which appears dead
 	match BAT6 blight bat which appears dead
 	match TOMMYKNOCKER6 tommyknocker which appears dead
 	match SLIME6 slime which appears dead
@@ -22127,13 +22126,6 @@ echo
 	save slime
 	goto S_%c
 
-OGRE6:
-echo
-echo OGRE6:
-echo
-	counter add 600000
-	save ogre
-	goto S_%c
 
 GRYPHON6:
 echo
@@ -25494,7 +25486,7 @@ echo
 	match CREEPER creeper which appears dead
 	match VINE morah vine which appears dead
 	match MARAUDER gypsy marauder which appears dead
-	match DUSK_OGRE dusk ogre which appears dead
+	match OGRE ogre which appears dead
 	match BEAR black bear which appears dead
 	match WOLF blood wolf which appears dead
 	match BOBCAT bobcat which appears dead
@@ -38569,7 +38561,6 @@ MONSTER_GROUP_5:
 	match WARRIOR adan'f blood warrior which appears dead
 	match DANCER adan'f spirit dancer which appears dead
 	match CRAB crab which appears dead
-	match DUSK_OGRE dusk ogre which appears dead
 	match HOUND shadow hound which appears dead
 	match SLUAGH greater sluagh which appears dead
 	match SEORDMAER scaly seordmaer which appears dead
@@ -41822,7 +41813,6 @@ MONSTER_GROUP_6:
 	match NYAD nyad which appears dead
 	match DRYAD dryad which appears dead
 	match GARGOYLE  marble gargoyle which appears dead
-	match OGRE ogre which appears dead
 	match BAT blight bat which appears dead
 	match TOMMYKNOCKER tommyknocker which appears dead
 	match SLIME slime which appears dead
@@ -46135,12 +46125,6 @@ echo
 	save ogre
 	goto S_%c
 
-DUSK_OGRE:
-echo
-echo DUSK_OGRE:
-echo
-	save ogre
-	goto SEARCH
 
 SLUAGH:
 echo
