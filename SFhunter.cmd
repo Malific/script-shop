@@ -17,7 +17,7 @@ echo
 put echo /off
 waitfor echo
 echo SFhunter Version 2
-echo Last tweak 8/22/2009 1:38PM
+echo Last tweak 8/12/2009 3:52PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -14079,7 +14079,7 @@ MULTIB_OFF:
 	echo MULTIB_OFF:
 	echo
 	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
-	match MULTI_EXP_%zHexpC EXP HELP
+	match MULTI_EXP_%zHexpC Deaths:
 put skill %zHexp
 	matchwait
 	
@@ -14089,7 +14089,7 @@ MULTIB_ON:
 	echo MULTIB_ON:
 	echo
 	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
-	match MULTI_EXP_%zHexpC EXP HELP
+	match MULTI_EXP_%zHexpC Deaths:
 put skill %zHexpA
 	matchwait
 	
@@ -14098,7 +14098,7 @@ MULTIB_THROW:
 	echo MULTIB_THROW:
 	echo
 	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
-	match MULTIB_THROW2 EXP HELP
+	match MULTIB_THROW2 Deaths:
 put skill Light Thrown
 	matchwait
 
@@ -14107,7 +14107,7 @@ MULTIB_THROW2:
 	echo MULTIB_THROW2:
 	echo
 	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
-	match MULTI_EXP_%zHexpC EXP HELP
+	match MULTI_EXP_%zHexpC Deaths:
 put skill Heavy Thrown
 	matchwait
 
@@ -14116,7 +14116,7 @@ MULTIB_OFFHAND:
 	echo MULTIB_OFFHAND:
 	echo
 	matchre MULTI_SWITCH /(30|31|32|33|34)\/34/i
-	match MULTI_EXP_%zHexpC EXP HELP
+	match MULTI_EXP_%zHexpC Deaths:
 put skill %zHexpB
 	matchwait
 
@@ -15287,7 +15287,7 @@ DEBUG_MODE:
 	echo ** SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 	echo ** AIM:   Malific Drockmur
 	echo **
-	echo ** SFhunter Version 2: Last tweak 8/22/2009 1:38PM
+	echo ** SFhunter Version 2: Last tweak 8/12/2009 3:52PM
 	echo **
 	echo **************************************************************************************
 	echo
