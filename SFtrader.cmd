@@ -14,7 +14,7 @@ echo
 put echo /off
 waitfor echo
 echo SFtrader
-echo Last tweak 8/22/2009 1:55PM
+echo Last tweak 8/27/2009 5:59PM
 echo
 echo SITE:  http://www.malific.com/ or http://www.geocities.com/malificdr/
 echo AIM:   Malific Drockmur
@@ -3086,7 +3086,7 @@ CLIMB8:
 	match CLIMB8A some stone stairs leading to the roadway below
 put w
 	matchwait
-CLIMB8B
+CLIMB8B:
 move s
 goto CLIMB8_DONE
 
@@ -22222,7 +22222,7 @@ LABELERROR:
 	echo
 	echo ** Copy/Paste DEBUG_MODE and the game window from the last oupost you left.
 	echo ***********************************************************
-	echo ** SFtrader: Last tweak 8/22/2009 1:55PM
+	echo ** SFtrader: Last tweak 8/27/2009 5:59PM
 	echo ** Variables:
 	echo **        1 = %1
 IF_2	echo **        2 = %2
